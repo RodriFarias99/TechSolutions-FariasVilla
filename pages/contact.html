@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/icon.jpg"   type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <title>Contacto</title>
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <a class="item" href="#">Lista de Deseos</a>
+                <a class="item" href="#">Iniciar Sesión</a>
+                <a class="item" href="#">Inscribirse</a>
+            </div>
+            <div class="tittle"><a href="../index.html"><h1>Tech Solutions</h1></a></div>
+            <div class="navegador">
+                <nav>
+                    <ul>
+                        <li><a class="item" href="../index.html">Inicio</a></li>
+                        <li><a class="item" href="products.html">Productos</a></li>
+                        <li><a class="item" href="service.html">Soluciones</a></li>
+                        <li><a class="item" href="contact.html">Contacto</a></li>
+                        <li><a class="item" href="aboutUs.html">Quiénes Somos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Contáctenos</h1>
+            <form class="contactForm" action="" method="post">
+                <fieldset>
+                    <div class="lineForm">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" required placeholder="Ingrese su nombre" id="name"/>
+                    </div>
+                    <br>
+                    <div class="lineForm">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" placeholder="Ingrese su Apellido" id="lastname">
+                    </div>
+                    <br>
+                    <div class="lineForm">
+                        <label for="mail">E-mail</label>
+                        <input type="text" name="mail" required placeholder="Ingrese su E-mail" id="mail">
+                    </div>
+                    <br>
+                    <div class="lineForm">
+                        <label for="gender" >Sexo:</label>
+                        <input type="radio" name="male" id="gender"> Hombre</input>
+                        <input type="radio" name="female" id="gender"> Mujer</input>
+                        <input type="radio" name="nb" id="gender"> No Binario</input>
+                    </div>
+                    <br>
+                    <div class="lineForm">
+                        <div>Desea Recibir Noticias<input type="checkbox" name="news" id="news" value="1"/></div>
+                    </div>
+                    <br>
+                    <div class="lineForm" id="comentaryBox">
+                        <textarea name="mensaje" required id="mensaje" cols="30" rows="10" placeholder="Ingrese su Comentario"></textarea>
+                    </div>
+                    <br>
+                    <div class="lineForm">
+                        <input type="submit" name="send" id="submit">
+                        <input type="reset" name="clear" id="reset">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+        <aside>
+
+        </aside>
+        <footer>
+            <h5>©2022 Rodrigo Farías, All right reserved.</h5>
+        </footer>
+    </body>
+</html>

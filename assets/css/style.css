@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    text-decoration: none;
+    list-style: none;
+}
+@media screen and (min-width:320px){
+
+}
+
+@media screen and (min-width:768px){
+
+}
+
+@media screen and (min-width:1200px){
+
+}
+body{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: lightslategrey;
+}
+/*---------------------------------------------------*/
+header{
+    background-color: blue;
+}
+/*---------------------------------------------------*/
+main{
+    background-color: green;
+}
+/*---------------------------------------------------*/
+aside{
+    background-color: rgb(255, 68, 68);
+}
+/*---------------------------------------------------*/
+section{
+    background-color: gold;
+}
+/*---------------------------------------------------*/
+footer{
+    background-color: lightgray;
+}
+/*
+
+
+.tittle:hover{
+    font-size: 110%;
+    font-weight: lighter;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-evenly;
+}
+ul li{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+ul li .item{
+    padding: 0.5rem;
+}
+ul li:hover{
+    font-weight: bolder;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.contactForm{
+    width: 80%;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.banner{
+    width: 90%;
+    height: auto;
+    display: flex;
+    border: 10px solid rgb(245, 241, 241);
+    border-radius: 15px;
+    margin: 10%;
+    padding: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: banner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes banner {
+        0%, 23%{
+            background-image: url(../img/iphone.jpeg);
+            opacity: 1;
+        }
+        24%, 27%{
+            opacity: 0.1;
+        }
+        28%, 73%{
+            opacity: 1;
+            background-image: url(../img//samsungS22.png);
+        }
+        74%, 76%{
+            opacity: 0.1;
+        }
+        77%, 100%{
+            opacity: 1;
+            background-image: url(../img/iphone.jpg);
+        }
+}
+.tablaProd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+}
+aside{
+    margin: 3%;
+    margin-bottom: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 350px;
+}
+.box1{
+    width: 35%;
+    border-radius: 5%;
+    background-color: crimson;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2{
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 35%;
+    background-image: url(../img/iphone.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.formNewsletter{
+    align-self: center;
+    padding: 1rem;
+}
+.barraFiltros{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2%;
+    color: beige;
+    background-color: rgb(214, 131, 255);
+}
+.barraFiltros .filtro{
+    text-decoration: none;
+}
+
+.barraFiltros .filtro:hover{
+    text-decoration: underline;
+}
+
+section{
+    width: 100%;
+}
+section .filtro{
+    padding: 10px;
+}
+footer{
+    background-color: coral;
+    margin-top: auto;
+    position: fixed;
+    width: 100%;
+    height: 6%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+*/
