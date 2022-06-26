@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="assets/img/icon.jpg"   type="image/x-icon">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Home</title>
     </head>
     <body>
@@ -18,7 +19,9 @@
                     <a class="gmail" href="#"> </a>
                 </div>
             </div>
-            <div class="tittle"><a href="index.html"><h1>Tech Solutions</h1></a></div>
+            <div data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" class="tittle"><a href="index.html"><h1>Tech Solutions</h1></a></div>
             <nav class="navegador">
                 <ul>
                         <li><a class="item" href="index.html">Inicio</a></li>
@@ -53,5 +56,9 @@
         <footer>
             <h5>©2022 Rodrigo Farías, All right reserved.</h5>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
