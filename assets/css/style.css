@@ -43,9 +43,10 @@ header{
 .topInfo{
     display: flex;
     width: 60%;
+    font-size: 14px;
 }
 .top{
-    width: 40%;
+    width: 38%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -55,9 +56,9 @@ header{
 
 .fav {
     background-image: url(../img/iconoFav.png);
-    height: 100%;
+    height: 50%;
     width: 25%;
-    padding: 20px;
+    padding: 14px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -66,9 +67,9 @@ header{
 
 .login{
     background-image: url(../img/iconoUser.png);
-    height: 100%;
+    height: 50%;
     width: 25%;
-    padding: 15px;
+    padding: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;   
@@ -76,9 +77,9 @@ header{
 
 .ig{
     background-image: url(../img/iconoIg.png);
-    height: 100%;
+    height: 50%;
     width: 25%;
-    padding: 20px;
+    padding: 13px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -86,16 +87,16 @@ header{
 
 .gmail{
     background-image: url(../img/iconoGmail.png);
-    height: 100%;
+    height: 50%;
     width: 25%;
-    padding: 15px;
+    padding: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .tittle{
     grid-area: tittle;
-    font-size: 15px;
+    font-size: 10px;
     margin-left: 15px;
     width: 100%;
     display: flex;
@@ -104,6 +105,8 @@ header{
 .navegador{
     grid-area: navegador;
     height: 100%;
+    font-size: 15px;
+    margin-left: 40px;
 }
 .navegador ul{
     display: flex;
@@ -293,7 +296,7 @@ footer{
 
 @media screen and (min-width:768px){
     header{
-        height: 220px;
+        height: 100px;
     }
     main{
         grid-area: main;
@@ -306,15 +309,27 @@ footer{
         align-items: center;
         justify-content: center;
     }
+    .login{
+        padding: 11px;
+    }
+    .fav{
+        padding: 16px;
+    }
+    .ig{
+        padding: 15px;
+    }
+    .gmail{
+        padding: 12px;
+    }
     .info{
         font-size: 20px;
         padding-left: 20px;
     }
     .tittle{
-        font-size: 25px;
+        font-size: 20px;
     }
     .navegador{
-        font-size: 25px;
+        font-size: 20px;
     }
     .banner{
         margin: 5px;
@@ -342,23 +357,35 @@ footer{
 
 @media screen and (min-width:1200px){
     header{
-        height: 400px;
+        height: 150px;
     }
     .top{
         padding: 5px;
         margin: 5px;
     }
+    .login{
+        padding: 14px;
+    }
+    .fav{
+        padding: 18px;
+    }
+    .ig{
+        padding: 16px;
+    }
+    .gmail{
+        padding: 13px;
+    }
     .info{
-        font-size: 50px;
+        font-size: 15px;
         padding-left: 35px;
     }
     .tittle{
-        font-size: 75px;
+        font-size: 25px;
         padding: 10px;
 
     }
     .navegador{
-        font-size: 75px;
+        font-size: 25px;
         padding: 1px;
         margin: 1px;
     }
@@ -368,15 +395,14 @@ footer{
         width: 80%;
     }
     section{
-        background-color: aqua;
-        width: 6150px;
+        width: 1500px;
         height: 80%;
         margin: 10px;
         border-radius: 20px;
     }
     .box{
-        width: 6150px;
-        height: 3500px;
+        width: 1500px;
+        height: 1500px;
     }
 }
 
