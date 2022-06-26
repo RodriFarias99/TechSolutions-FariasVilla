@@ -7,41 +7,377 @@
     text-decoration: none;
     list-style: none;
 }
-@media screen and (min-width:320px){
-
-}
-
-@media screen and (min-width:768px){
-
-}
-
-@media screen and (min-width:1200px){
-
-}
 body{
+    width: 100%;
     font-family: 'Fira Sans Condensed', sans-serif;
     background-color: lightslategrey;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+:visited{
+    text-decoration: none;
+    color: white;
 }
 /*---------------------------------------------------*/
 header{
+    width: 100%;
+    height: 100px;
+    grid-area: header;
     background-color: blue;
+    display: grid;
+    grid-template-areas: 
+        "info info info"
+        "tittle tittle navegador";
 }
-/*---------------------------------------------------*/
+.info{
+    grid-area: info;
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topInfo{
+    display: flex;
+    width: 60%;
+}
+.top{
+    width: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fav {
+    background-image: url(../img/iconoFav.png);
+    height: 100%;
+    width: 25%;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.login{
+    background-image: url(../img/iconoUser.png);
+    height: 100%;
+    width: 25%;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+}
+
+.ig{
+    background-image: url(../img/iconoIg.png);
+    height: 100%;
+    width: 25%;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gmail{
+    background-image: url(../img/iconoGmail.png);
+    height: 100%;
+    width: 25%;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.tittle{
+    grid-area: tittle;
+    font-size: 15px;
+    margin-left: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navegador{
+    grid-area: navegador;
+    height: 100%;
+}
+.navegador ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    overflow: hidden;
+}
+.navegador ul li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
 main{
-    background-color: green;
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "banner banner banner"
+    "mark mark mark"
+    "products products products"
+    "adds adds adds";
+    grid-template-rows: 25% 20% auto auto;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
 }
-/*---------------------------------------------------*/
-aside{
+
+.banner{
+    grid-area: banner;
+    background-color: black;
+    width: 100%;
+    height: 150%;
+    display: flex;
+    justify-content: center;
+    border: 10px solid rgb(22, 21, 21);
+    border-radius: 15px;
+    padding: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: banner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes banner {
+    0%, 23%{
+        background-image: url(../img/motoG200.png);
+        opacity: 1;
+    }
+    24%, 27%{
+        opacity: 0.1;
+    }
+    28%, 73%{
+        opacity: 1;
+        background-image: url(../img/samsungS22.png);
+    }
+    74%, 76%{
+        opacity: 0.1;
+    }
+    77%, 100%{
+        opacity: 1;
+        background-image: url(../img/iphone13ProMaxRosa.jpg);
+    }
+}
+/*---------------------------------------------------------------------------*/
+.tablaProd{
+    background-color: #000000;
+    grid-area: mark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 2rem;
+    width: 100%;
+}
+td{
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    width: 100%;
+}
+.producto{
+    justify-content: center;
+    align-self: center;
+    height: 200px;
+    margin: 20px;
+}
+/*--------------------------------------------------------------------------*/
+.contactForm{
+    padding: 5%;
+    grid-area: banner;
+    width: 100%;
+    height: auto;
+}
+fieldset{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #000000;
+    background-image: -moz-linear-gradient(top, #505050, #000000);
+    background-image: -o-linear-gradient(top, #7c7c7c, #000000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #191919), color-stop(1, #000000));
+    background-image: -webkit-linear-gradient(#8d8d8d, #000000);
+    background-image: linear-gradient(top, #e9e9e9, #000000);
+}
+.ask{
+    display: inline-block;
+    margin: 5px;
+}
+input{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------*/
+.box{
+    grid-area: adds;
     background-color: rgb(255, 68, 68);
+    margin-right: 2%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 320px;
 }
-/*---------------------------------------------------*/
+.map{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    height:100%;
+    width: 100%;
+}
+iframe{
+    height: 500px;
+    width: 500px;
+}
+/*--------------------------------------------------------------------------*/
+.box1{
+    width: 40%;
+    height: 90%;
+    align-self: center;
+    border-radius: 5%;
+    background-color: crimson;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2{
+    height: 90%;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-end;
+    width: 40%;
+    background-image: url(../img/iphone.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+}
+.formNewsletter{
+    align-self: center;
+    padding: 1rem;
+}
+.content{
+    margin: 5%;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
 section{
+    grid-area: products;
     background-color: gold;
+    height: 100%;
 }
-/*---------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
 footer{
-    background-color: lightgray;
+    grid-area: footer;
+    background-color: #191919;
+    background-image: -moz-linear-gradient(top, #191919, #000000);
+    background-image: -o-linear-gradient(top, #191919, #000000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #191919), color-stop(1, #000000));
+    background-image: -webkit-linear-gradient(#191919, #000000);
+    background-image: linear-gradient(top, #191919, #000000);
+    height: 100px
 }
+
+@media screen and (min-width:768px){
+    header{
+        height: 220px;
+    }
+    main{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 35% 5% 25% 35%;
+        background-color: rgb(0, 0, 0);
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .info{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .tittle{
+        font-size: 25px;
+    }
+    .navegador{
+        font-size: 25px;
+    }
+    .banner{
+        margin: 5px;
+        height: 650px;
+        width: 80%;
+    }
+    section{
+        background-color:rgba(15, 15, 15, 0.3);
+        width: 950px;
+        height: 500px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .box{
+        background-color: rgba(14, 14, 14, 0.1);
+        margin: 15px;
+        width: 950px;
+        height: 500px;
+    }
+
+    footer{
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .top{
+        padding: 5px;
+        margin: 5px;
+    }
+    .info{
+        font-size: 20px;
+        padding-left: 35px;
+    }
+    .tittle{
+        font-size: 25px;
+    }
+    .navegador{
+        font-size: 25px;
+        padding: 1px;
+        margin: 1px;
+    }
+    .banner{
+        margin: 5px;
+        height: 650px;
+        width: 80%;
+    }
+    section{
+        width: 1500px;
+        height: 650px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .box{
+        width: 1500px;
+        height: 600px;
+    }
+}
+
 /*
 
 
@@ -124,15 +460,7 @@ fieldset{
             background-image: url(../img/iphone.jpg);
         }
 }
-.tablaProd{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    padding: 2rem;
-    width: 100%;
-}
+
 table{
     width: 100%;
 }
