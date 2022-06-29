@@ -4,63 +4,125 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="assets/img/icon.jpg"   type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Home</title>
         
     </head>
     <body>
-        <header>
-            <div class="info">
-                <div class="topInfo"><a href="#"><h3>Envios Gratis en Productos Seleccionados</h3></a></div>
-                <div class="top">
-                    <a href="#" class="login"> </a>
-                    <a class="fav" href="#"> </a>
-                    <a class="ig" href="#"> </a>
-                    <a class="gmail" href="#"> </a>
+        <header class="container align-items-center">
+            <div class="announce col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
+            <div class="row">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class=" row justify-content-between align-items-center container-fluid">
+                        <h1 class="col-3 logo">Tech Solutions</h1>
+                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div> 
+            <div class="row collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                  <h5 class="text-white h4">Collapsed content</h5>
+                  <span class="text-muted">Toggleable via the navbar brand.</span>
                 </div>
             </div>
-            <div data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine" data-aos-duration="3000" class="tittle"><a href="index.html"><h1>Tech Solutions</h1></a></div>
-            <nav class="navegador">
-                <ul>
-                        <li><a class="item" href="index.html">Inicio</a></li>
-                        <li><a class="item" href="pages/products.html">Productos</a></li>
-                        <li><a class="item" href="pages/service.html">Soluciones</a></li>
-                        <li><a class="item" href="pages/contact.html">Contacto</a></li>
-                        <li><a class="item" href="pages/aboutUs.html">Quiénes Somos</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
-            <div class="banner"></div>
-            <section>
-                <div class="barraFiltros">
-                    <a class="filtro" href="#">Lo Más Vendido</a>
-                    <a class="filtro" href="#">Ofertas</a>
-                    <a class="filtro" href="#">Mejor Valorados</a>
-                    <a class="filtro" href="#">Favoritos</a>
+            <div class="row">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/samsungS22Blanco.png" class="d-block w-100" height="350px" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/iphone.jpeg" class="d-block w-100" height="350px" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/motoG200.png" class="d-block w-100" height="350px" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </section>
-        
-            <aside data-aos="flip-left" data-aos-duration="2000" class="box">
-                <div class="box1"></div>
-                <div class="box2">
-                    <form class="formNewsletter" action="" method="post">
-                        <input type="email" id="mail" placeholder="Correo Electrónico">
-                        <input type="submit" name="enviar" value="Suscribirse" id="enviar">
-                    </form>
+                <div class="noti text-center my-0">Cuotas sin Interés</div>
+                <div class="list mx-3 row d-flex flex-wrap">
+                    <div class="card col-5 m-2 mx-3">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Producto 1</h5>
+                          <p class="card-text">Some quick example text to build.</p>
+                          <a href="#" class="btn btn-dark">Comprar</a>
+                          <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="card col-5 m-2 mx-3">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Some quick example text to build.</p>
+                            <a href="#" class="btn btn-dark">Comprar</a>
+                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="card col-5 m-2 mx-3">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Some quick example text to build.</p>
+                            <a href="#" class="btn btn-dark">Comprar</a>
+                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="card col-5 m-2 mx-3">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Some quick example text to build.</p>
+                            <a href="#" class="btn btn-dark">Comprar</a>
+                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="card col-5 m-2 mx-3">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Some quick example text to build.</p>
+                            <a href="#" class="btn btn-dark">Comprar</a>
+                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                        </div>
+                    </div>
                 </div>
-            </aside>
+                <div class="destacados row"></div>
+            </div>
         </main>
         <footer>
-            <h5>©2022 Rodrigo Farías, All right reserved.</h5>
+            <div class="row"></div>
         </footer>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
     
 </html>
+
+<!--
+<div class="row justify-content-center align-items-center">
+    <p class="col-2 col-md-3">Lorem ipsum dolor</p>
+    <p class="col-8 col-md-3">Lorem ipsum, dolor</p>
+    <p class="col-2 col-md-3">Lorem ipsum, dolor</p>
+</div>
+<div class="row justify-content-center align-items-center">
+    <p class="col-4 col-md-3">Lorem ipsum, dolor</p>
+    <p class="col-4 col-md-3">Lorem ipsum, dolor</p>
+    <p class="col-4 col-md-3">Lorem ipsum, dolor</p>
+</div>
+
+-->
