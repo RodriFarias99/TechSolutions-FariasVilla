@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap');
+
 header{
     background-color: darkgray;
 }
@@ -7,6 +8,9 @@ main{
 }
 body{
     background-color: black;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    overflow-x: hidden;
+    
 }
 .logo{
     color: rgb(255, 255, 255);
@@ -20,6 +24,63 @@ header{
     margin-top: -300px;
     position: fixed;
     z-index: 2;
+}
+.redes{
+    margin-left: 15px;
+    align-items: center;
+}
+
+.gmail{
+    background-image: url(../img/iconoGmail.png);
+    height: 50%;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+}
+
+.ig{
+    background-image: url(../img/iconoIg.png);
+    height: 50%;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.fb{
+    background-image: url(../img/iconoFb.png);
+    height: 50%;
+    padding: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.Yt{
+    background-image: url(../img/iconoYt.png);
+    height: 50%;
+    padding: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer{
+    background-color: rgba(5,5,5,1);
+    padding: 15px;
+    
+}
+fieldset{
+    background-color: rgba(25,25,25,1);
+    padding: 10px;
+}
+.lineForm{
+    color: rgba(100,100,100,1);
+    font-weight: bold;
+}
+#submit{
+    color: fuchsia;
+}
+#reset{
+    color: fuchsia;
 }
 /*
 *{

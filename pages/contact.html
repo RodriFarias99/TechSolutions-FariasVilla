@@ -4,75 +4,81 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="assets/img/icon.jpg"   type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../assets/css/style.css">
         <title>Contacto</title>
     </head>
     <body>
-        <header>
-            <div class="info">
-                <div class="topInfo"><a href="#"><h3>Envios Gratis en Productos Seleccionados</h3></a></div>
-                <div class="top">
-                    <a href="#" class="login"> </a>
-                    <a class="fav" href="#"> </a>
-                    <a class="ig" href="#"> </a>
-                    <a class="gmail" href="#"> </a>
+        <header class="container-fluid align-items-center">
+            <div class="announce col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
+            <div class="row">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class=" row justify-content-between align-items-center container-fluid">
+                        <h1 class="col-3 logo">Tech Solutions</h1>
+                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div> 
+            <div class="row collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <ul class="bg-dark list-group">
+                        <li><a class="list-group-item" href="../index.html">Inicio</a></li>
+                        <li><a class="list-group-item" href="/pages/products.html">Productos</a></li>
+                        <li><a class="list-group-item" href="/pages/service.html">Soluciones</a></li>
+                        <li><a class="list-group-item" href="/pages/contact.html">Contacto</a></li>
+                        <li><a class="list-group-item" href="/pages/aboutUs.html">Quiénes Somos</a></li>
+                    </ul>
+                  <span class="text-muted">Toggleable via the navbar brand.</span>
                 </div>
             </div>
-            <div class="tittle"><a href="../index.html"><h1>Tech Solutions</h1></a></div>
-            <nav class="navegador">
-                <ul>
-                    <li><a class="item" href="../index.html">Inicio</a></li>
-                    <li><a class="item" href="products.html">Productos</a></li>
-                    <li><a class="item" href="service.html">Soluciones</a></li>
-                    <li><a class="item" href="contact.html">Contacto</a></li>
-                    <li><a class="item" href="aboutUs.html">Quiénes Somos</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
-            <form class="contactForm" action="" method="post">
-                <h1>Contáctenos</h1>
-                <fieldset>
-                    <div class="lineForm">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="name" required placeholder="Ingrese su nombre" id="name"/>
-                    </div>
-                    <br>
-                    <div class="lineForm">
-                        <label for="lastname">Apellido</label>
-                        <input type="text" name="lastname" placeholder="Ingrese su Apellido" id="lastname">
-                    </div>
-                    <br>
-                    <div class="lineForm">
-                        <label for="mail">E-mail</label>
-                        <input type="text" name="mail" required placeholder="Ingrese su E-mail" id="mail">
-                    </div>
-                    <br>
-                    <div class="lineForm">
-                        <div><label class="ask" for="gender" >Sexo:</label></div>
-                            <div class="ask"><h5>Hombre</h5><input type="radio" name="male" id="gender"> </input></div>
-                            <div class="ask"><h5>Mujer</h5><input type="radio" name="female" id="gender"> </input></div>
-                            <div class="ask"><h5>Genero</h5><input type="radio" name="nb" id="gender"> </input></div>
-                    </div>
-                    <br>
-                    <div class="lineForm">
-                        <div>Desea Recibir Noticias</div>
-                        <div><input type="checkbox" name="news" id="news" value="1"/></div>
-                    </div>
-                    <br>
-                    <div class="lineForm" id="comentaryBox">
-                        <textarea name="mensaje" required id="mensaje" cols="50" rows="10" placeholder="Ingrese su Comentario"></textarea>
-                    </div>
-                    <br>
-                    <div>
-                        <input type="submit" name="send" id="submit">
-                        <input type="reset" name="clear" id="reset">
-                    </div>
-                </fieldset>
-            </form>
+            <div class="container">
+                <form class="contactForm" action="#" method="post">
+                    <h1>Contáctenos</h1>
+                    <fieldset>
+                        <div class="form-group lineForm">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" name="name" required placeholder="Ingrese su nombre" id="name"/>
+                        </div>
+                        <br>
+                        <div class="form-group lineForm">
+                            <label for="email">Nombre</label>
+                            <input type="email" class="form-control" name="email" required placeholder="Ingrese su E-mail" id="email"/>
+                        </div>
+                        <br>
+                        <div class="form-group lineForm">
+                            <input type="checkbox" name="news" id="news" value="1"/>
+                            <label for="news">Desea Recibir Noticias y Ofertas?</label>
+                        </div>
+                        <br>
+                        <div class="row form-group lineForm d-flex justify-content-center align-items-center" id="comentaryBox">
+                            <textarea class="col-10 rounded" name="mensaje" required id="mensaje" rows="12" placeholder="Ingrese su Comentario"></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-default" name="send" id="submit">Enviar</button>
+                        <button type="reset" name="clear" id="reset" class="btn btn-default">Reset</button>
+                    </fieldset>
+                </form>
+            </div>
         </main>
-        <footer>
-            <h5>©2022 Rodrigo Farías, All right reserved.</h5>
+        <footer class="row container-fluid text-center">
+            <div class="row col-12 col-xl-4">
+                <a href="#" class="col-12 mx-5">Como Comprar</a>
+                <a href="/pages/contact.html" class="col-12 mx-5">Contacto</a>
+                <a href="/pages/aboutUs.html" class="col-12  mx-5">Quienes Somos</a>
+            </div>
+            <div class="row col-12 col-xl-4 redes">
+                    <a href="#" class="ig col-3"></a>
+                    <a href="#" class="fb col-3"></a>
+                    <a href="#" class="Yt col-3"></a>
+                    <a href="#" class="gmail col-3"></a>
+            </div>
+            <div class="col-12 col-xl-4"><h5>©2022 Rodrigo Farías, All right reserved.</h5></div>
         </footer>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
 </html>
