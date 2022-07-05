@@ -13,26 +13,27 @@
     <body>
         <header class="container-fluid align-items-center">
             <div class="announce col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
-            <div class="row">
-                <nav class="navbar navbar-dark bg-dark">
-                    <div class=" row justify-content-between align-items-center container-fluid">
-                        <a  class="col-3 logo" href="index.html"><h1>Tech Solutions</h1></a>
+            <div class="row topNav">
+                <nav class="navbar navbar-dark">
+                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
+                        <a  class=" col-3 logo" href="index.html"><h1>Tech Solutions</h1></a>
                         <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                 </nav>
-            </div> 
-            <div class="row collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                    <ul class="bg-dark list-group">
-                        <li><a class="list-group-item" href="index.html">Inicio</a></li>
-                        <li><a class="list-group-item" href="./pages/products.html">Productos</a></li>
-                        <li><a class="list-group-item" href="./pages/service.html">Soluciones</a></li>
-                        <li><a class="list-group-item" href="./pages/contact.html">Contacto</a></li>
-                        <li><a class="list-group-item" href="./pages/aboutUs.html">Quiénes Somos</a></li>
-                    </ul>
-                  <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+            <div class="row collapse containerMenu" id="navbarToggleExternalContent">
+                <div class="p-4 boxMenuList">
+                    <ul class="list-group menuList">
+                        <div class="boxList">
+                            <li><a class="list-group-item" href="index.html">Inicio</a></li>
+                            <li><a class="list-group-item" href="./pages/products.html">Productos</a></li>
+                            <li><a class="list-group-item" href="./pages/service.html">Soluciones</a></li>
+                            <li><a class="list-group-item" href="./pages/contact.html">Contacto</a></li>
+                            <li><a class="list-group-item" href="./pages/aboutUs.html">Quiénes Somos</a></li>
+                        </div>
+                    </ul>    
                 </div>
             </div>
         </header>
@@ -47,7 +48,7 @@
                             <img src="./assets/img/iphone.jpeg" class="d-block w-100" height="500vh" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/motoG200.png" class="d-block w-100" height="500vh" alt="...">
+                            <img src="./assets/img/motoG200.png" class="d-block w-100" height="500vh" alt="...">\index.html
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -59,51 +60,58 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <div class="noti text-center my-0">Cuotas sin Interés</div>
+                <div class="noti col-10 text-center my-1">
+                    <h3>Cuotas sin Interés</h3>
+                    <div class="row d-flex justify-content-between px-5">
+                        <img class="col-3 col-md-2 col-xl-1 mx-1" src="./assets/img//logoWpp3.png"  alt="">
+                        <img class="col-3 col-md-2 col-xl-1 mx-1" src="./assets/img/logoRayo.png"alt="">
+                        <img class="col-3 col-md-2 col-xl-1 mx-1" src="./assets/img/logoCamion.png" alt="">
+                    </div>
+                </div>
                 <div class="list mx-3 row d-flex flex-wrap justify-content-center">
-                    <div class="card col-5 col-xl-3 m-2 mx-3">
-                        <img src="./assets/img/prod1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto 1</h5>
-                          <p class="card-text">Some quick example text to build.</p>
-                          <a href="#" class="btn btn-dark">Comprar</a>
-                          <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-2 mx-3 p-1 d-flex justify-content-center ">
+                        <img src="../assets/img/prod1.jpg" class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">Producto 1</h5>
+                            <p class="col-12">Some quick example text to build Some quick example text to build.</p>
+                            <button class="col-5 px-1"><a href="#">Comprar</a></button>
+                            <button class="col-7"><a href="#">Agregar al Carrito</a></button>
                         </div>
                     </div>
-                    <div class="card col-5 col-xl-3 m-2 mx-3">
-                        <img src="./assets/img/prod1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Some quick example text to build.</p>
-                            <a href="#" class="btn btn-dark">Comprar</a>
-                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-2 mx-3 p-1 d-flex justify-content-center ">
+                        <img src="../assets/img/prod2.jpg" class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">Producto 1</h5>
+                            <p class="col-12">Some quick example text to build Some quick example text to build.</p>
+                            <button class="col-5 px-1"><a href="#">Comprar</a></button>
+                            <button class="col-7"><a href="#">Agregar al Carrito</a></button>
                         </div>
                     </div>
-                    <div class="card col-5 col-xl-3 m-2 mx-3">
-                        <img src="./assets/img/prod1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Some quick example text to build.</p>
-                            <a href="#" class="btn btn-dark">Comprar</a>
-                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-2 mx-3 p-1 d-flex justify-content-center ">
+                        <img src="../assets/img/prod3.jpg" class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">Producto 1</h5>
+                            <p class="col-12">Some quick example text to build Some quick example text to build.</p>
+                            <button class="col-5 px-1"><a href="#">Comprar</a></button>
+                            <button class="col-7"><a href="#">Agregar al Carrito</a></button>
                         </div>
                     </div>
-                    <div class="card col-5 col-xl-3 m-2 mx-3">
-                        <img src="./assets/img/prod1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Some quick example text to build.</p>
-                            <a href="#" class="btn btn-dark">Comprar</a>
-                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-2 mx-3 p-1 d-flex justify-content-center ">
+                        <img src="../assets/img/prod4.jpg" class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">Producto 1</h5>
+                            <p class="col-12">Some quick example text to build Some quick example text to build.</p>
+                            <button class="col-5 px-1"><a href="#">Comprar</a></button>
+                            <button class="col-7"><a href="#">Agregar al Carrito</a></button>
                         </div>
                     </div>
-                    <div class="card col-5 col-xl-3 m-2 mx-3">
-                        <img src="./assets/img/prod1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Some quick example text to build.</p>
-                            <a href="#" class="btn btn-dark">Comprar</a>
-                            <a href="#" class="btn btn-dark mt-1">Agregar al Carrito</a>
+                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-2 mx-3 p-1 d-flex justify-content-center ">
+                        <img src="../assets/img/prod5.jpg" class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">Producto 1</h5>
+                            <p class="col-12">Some quick example text to build Some quick example text to build.</p>
+                            <button class="col-5 px-1"><a href="#">Comprar</a></button>
+                            <button class="col-7"><a href="#">Agregar al Carrito</a></button>
                         </div>
                     </div>
                 </div>

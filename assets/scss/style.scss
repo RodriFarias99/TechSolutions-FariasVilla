@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap');
+*{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+$colorPrimario:rgb(255, 0, 212);
+$colorSecundario: black;
+$colorterciario: rgba(5,5,5,1);
+$colorTenue: rgb(50,50,50);
+
+body{
+    background-color: black;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+header{
+    background-color: $colorTenue;
+    margin-top: -300px;
+    position: fixed;
+    z-index: 2;
+    list-style: none;
+    color: white;
+    .logo{
+        color: black;
+        text-shadow: 0 0 0.2em $colorPrimario, 0 0 0.2em $colorPrimario;
+        &:hover{
+            color: white;
+        }
+    }
+    .navbar{
+        background-color: $colorterciario;
+        button{
+            &:hover{
+                color: $colorPrimario;
+            }
+        }
+    }
+
+    .boxMenuList{
+        background-color: $colorterciario;
+        .menuList{
+            li{
+                list-style: none;
+               a{
+                    background-color: $colorSecundario;
+                    color: $colorPrimario;
+                
+                    &:hover{
+                    background-color: $colorTenue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    a{
+        text-decoration: none;
+        color: $colorPrimario;
+    }
+    margin-top: 300px;
+    .noti{
+        background-color: $colorSecundario;
+        height: 20vh;
+        overflow: hidden;
+    }
+}
+
+.filtroProductos{
+    .btn{
+        border: 1px solid;
+        &:hover{
+            border-color: $colorPrimario;
+            color: $colorPrimario;
+        }
+    }
+}
+
+footer{
+    background-color: $colorterciario;
+    padding: 15px;
+    a{
+        color: $colorTenue;
+        &:hover{
+            color: $colorPrimario;
+        }
+    }
+    .redes{
+        margin-left: 15px;
+        align-items: center;
+        .gmail{
+            background-image: url(../img/iconoGmail.png);
+            height: 50%;
+            padding: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;   
+        }
+        
+        .ig{
+            background-image: url(../img/iconoIg.png);
+            height: 50%;
+            padding: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .fb{
+            background-image: url(../img/iconoFb.png);
+            height: 50%;
+            padding: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .Yt{
+            background-image: url(../img/iconoYt.png);
+            height: 50%;
+            padding: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }     
+    }
+}
+
+
+fieldset{
+    background-color: $colorterciario;
+    padding: 10px;
+    .lineForm{
+        color: rgba(100,100,100,1);
+        font-weight: bold;
+    }
+    #submit{
+        color: $colorPrimario;
+    }
+    #reset{
+        color: $colorPrimario;
+    }
+}
+
+.tarjeta{
+    border: 2px solid;
+    border-color: $colorPrimario;
+    border-radius: 15px;
+    img{
+        background-color: $colorSecundario;
+        border: 0px;
+    }
+    button{
+        color: $colorPrimario;
+        background-color: $colorterciario;
+        border-radius: 15px;
+        padding: 8px;
+        &:hover{
+            background-color: rgb(15,15,15);
+            box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
+            a{
+                color: white;
+            }
+        }
+    }
+}
