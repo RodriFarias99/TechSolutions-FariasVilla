@@ -1,0 +1,40 @@
+header{
+    background-color: $colorTenue;
+    margin-top: -300px;
+    position: fixed;
+    z-index: 2;
+    list-style: none;
+    color: white;
+    .logo{
+        color: black;
+        text-shadow: 0 0 0.2em $colorPrimario, 0 0 0.2em $colorPrimario;
+        &:hover{
+            color: white;
+        }
+    }
+    .navbar{
+        background-color: $colorterciario;
+        button{
+            &:hover{
+                color: $colorPrimario;
+            }
+        }
+    }
+
+    .boxMenuList{
+        background-color: $colorterciario;
+        .menuList{
+            li{
+                list-style: none;
+               a{
+                    background-color: $colorSecundario;
+                    color: $colorPrimario;
+                
+                    &:hover{
+                    background-color: $colorTenue;
+                    }
+                }
+            }
+        }
+    }
+}
