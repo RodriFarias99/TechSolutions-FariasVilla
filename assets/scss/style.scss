@@ -21,8 +21,7 @@ body{
 
 
 .contentBox{
-    box-shadow: 1px 1px 20px 5px rgba(226, 0, 196, 1);
-    border-radius: 15px;
+    @extend .tarjeta;
     &:hover{
         box-shadow: 1px 1px 30px 10px rgba(255, 0, 200, 1);
         border: 2px solid;
@@ -87,3 +86,14 @@ fieldset{
     }
 }
 
+$fontSizes:(
+    sm: 10px,
+    med: 18px,
+    big: 25px
+);
+
+@each $screen, $size in $fontSizes{
+    .screen--#{$screen}{
+        font-size: $size;
+    }
+}

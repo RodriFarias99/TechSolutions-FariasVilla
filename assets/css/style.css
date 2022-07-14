@@ -7,31 +7,31 @@ a {
   text-decoration: none;
 }
 
-.tarjeta {
+.tarjeta, .contentBox {
   box-shadow: rgba(226, 0, 196, 0.5) 0px 5px 15px;
   border: 2px solid;
   border-color: rgb(255, 0, 212);
   border-radius: 15px;
   color: rgb(100, 100, 100);
 }
-.tarjeta img {
+.tarjeta img, .contentBox img {
   background-color: black;
   border: 0px;
 }
-.tarjeta button {
+.tarjeta button, .contentBox button {
   color: rgb(100, 100, 100);
   background-color: rgb(5, 5, 5);
   border-radius: 15px;
   padding: 3px;
 }
-.tarjeta button:hover {
+.tarjeta button:hover, .contentBox button:hover {
   background-color: rgb(15, 15, 15);
   box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
 }
-.tarjeta button:hover a {
+.tarjeta button:hover a, .contentBox button:hover a {
   color: white;
 }
-.tarjeta:hover {
+.tarjeta:hover, .contentBox:hover {
   box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
   border: 2px solid;
   border-color: rgb(255, 0, 212);
@@ -138,10 +138,6 @@ body {
   color: rgb(100, 100, 100);
 }
 
-.contentBox {
-  box-shadow: 1px 1px 20px 5px rgb(226, 0, 196);
-  border-radius: 15px;
-}
 .contentBox:hover {
   box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
   border: 2px solid;
@@ -195,4 +191,16 @@ fieldset #reset {
 .pagination li a:hover {
   background-color: rgb(255, 0, 212);
   color: white;
+}
+
+.screen--sm {
+  font-size: 10px;
+}
+
+.screen--med {
+  font-size: 18px;
+}
+
+.screen--big {
+  font-size: 25px;
 }/*# sourceMappingURL=style.css.map */
