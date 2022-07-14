@@ -16,19 +16,35 @@ body{
     background-color: black;
     font-family: 'Fira Sans Condensed', sans-serif;
     overflow-x: hidden;
+    color: $colorTexto;
+}
+
+
+.contentBox{
+    box-shadow: 1px 1px 20px 5px rgba(226, 0, 196, 1);
+    border-radius: 15px;
+    &:hover{
+        box-shadow: 1px 1px 30px 10px rgba(255, 0, 200, 1);
+        border: 2px solid;
+        border-color: $colorPrimario;
+    }
 }
 
 main{
+    margin-top: 150px;
     a{
         text-decoration: none;
         color: $colorPrimario;
     }
-    margin-top: 300px;
-    .noti{
-        background-color: $colorSecundario;
-        height: 20vh;
-        overflow: hidden;
+}
+
+.noti{
+    background-color: $colorSecundario;
+    overflow: hidden;
+    .logo{
+        height: 10vh;
     }
+
 }
 
 .filtroProductos{
@@ -57,4 +73,17 @@ fieldset{
     }
 }
 
+.pagination{
+    li{
+        a{
+            color: $colorPrimario;
+            background-color: black;
+            border-color: $colorPrimario;
+            &:hover{
+                background-color: $colorPrimario;
+                color: white;
+            }
+        }
+    }
+}
 

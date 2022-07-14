@@ -1,13 +1,15 @@
 .tarjeta{
+    box-shadow: rgba(226, 0, 196, 0.5) 0px 5px 15px;
     border: 2px solid;
     border-color: $colorPrimario;
     border-radius: 15px;
+    color: $colorTexto;
     img{
         background-color: $colorSecundario;
         border: 0px;
     }
     button{
-        color: $colorPrimario;
+        color: $colorTexto;
         background-color: $colorterciario;
         border-radius: 15px;
         padding: 3px;
@@ -18,5 +20,10 @@
                 color: white;
             }
         }
+    }
+    &:hover{
+        box-shadow: 1px 1px 30px 10px rgba(255, 0, 200, 1);
+        border: 2px solid;
+        border-color: $colorPrimario;
     }
 }

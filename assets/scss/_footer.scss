@@ -2,7 +2,7 @@ footer{
     background-color: $colorterciario;
     padding: 15px;
     a{
-        color: $colorTenue;
+        color: $colorTexto;
         &:hover{
             color: $colorPrimario;
         }
@@ -16,7 +16,10 @@ footer{
             padding: 15px;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: contain;   
+            background-size: contain;
+            &:hover{
+                padding: 20px;
+            }
         }
         
         .ig{
@@ -26,6 +29,9 @@ footer{
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            &:hover{
+                padding: 25px;
+            }
         }
         .fb{
             background-image: url(../img/iconoFb.png);
@@ -34,6 +40,9 @@ footer{
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            &:hover{
+                padding: 35px;
+            }
         }
         .Yt{
             background-image: url(../img/iconoYt.png);
@@ -42,6 +51,9 @@ footer{
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            &:hover{
+                padding: 30px;
+            }
         }     
     }
 }

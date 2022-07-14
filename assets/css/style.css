@@ -7,17 +7,41 @@ a {
   text-decoration: none;
 }
 
-body {
+.tarjeta {
+  box-shadow: rgba(226, 0, 196, 0.5) 0px 5px 15px;
+  border: 2px solid;
+  border-color: rgb(255, 0, 212);
+  border-radius: 15px;
+  color: rgb(100, 100, 100);
+}
+.tarjeta img {
   background-color: black;
-  font-family: "Fira Sans Condensed", sans-serif;
-  overflow-x: hidden;
+  border: 0px;
+}
+.tarjeta button {
+  color: rgb(100, 100, 100);
+  background-color: rgb(5, 5, 5);
+  border-radius: 15px;
+  padding: 3px;
+}
+.tarjeta button:hover {
+  background-color: rgb(15, 15, 15);
+  box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
+}
+.tarjeta button:hover a {
+  color: white;
+}
+.tarjeta:hover {
+  box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
+  border: 2px solid;
+  border-color: rgb(255, 0, 212);
 }
 
 header {
   background-color: rgb(50, 50, 50);
-  margin-top: -300px;
   position: fixed;
   z-index: 2;
+  margin-top: -150px;
   list-style: none;
   color: white;
 }
@@ -48,33 +72,12 @@ header .boxMenuList .menuList li a:hover {
   background-color: rgb(50, 50, 50);
 }
 
-main {
-  margin-top: 300px;
-}
-main a {
-  text-decoration: none;
-  color: rgb(255, 0, 212);
-}
-main .noti {
-  background-color: black;
-  height: 20vh;
-  overflow: hidden;
-}
-
-.filtroProductos .btn {
-  border: 1px solid;
-}
-.filtroProductos .btn:hover {
-  border-color: rgb(255, 0, 212);
-  color: rgb(255, 0, 212);
-}
-
 footer {
   background-color: rgb(5, 5, 5);
   padding: 15px;
 }
 footer a {
-  color: rgb(50, 50, 50);
+  color: rgb(100, 100, 100);
 }
 footer a:hover {
   color: rgb(255, 0, 212);
@@ -91,6 +94,9 @@ footer .redes .gmail {
   background-repeat: no-repeat;
   background-size: contain;
 }
+footer .redes .gmail:hover {
+  padding: 20px;
+}
 footer .redes .ig {
   background-image: url(../img/iconoIg.png);
   height: 50%;
@@ -98,6 +104,9 @@ footer .redes .ig {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+footer .redes .ig:hover {
+  padding: 25px;
 }
 footer .redes .fb {
   background-image: url(../img/iconoFb.png);
@@ -107,6 +116,9 @@ footer .redes .fb {
   background-repeat: no-repeat;
   background-size: contain;
 }
+footer .redes .fb:hover {
+  padding: 35px;
+}
 footer .redes .Yt {
   background-image: url(../img/iconoYt.png);
   height: 50%;
@@ -114,6 +126,50 @@ footer .redes .Yt {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+footer .redes .Yt:hover {
+  padding: 30px;
+}
+
+body {
+  background-color: black;
+  font-family: "Fira Sans Condensed", sans-serif;
+  overflow-x: hidden;
+  color: rgb(100, 100, 100);
+}
+
+.contentBox {
+  box-shadow: 1px 1px 20px 5px rgb(226, 0, 196);
+  border-radius: 15px;
+}
+.contentBox:hover {
+  box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
+  border: 2px solid;
+  border-color: rgb(255, 0, 212);
+}
+
+main {
+  margin-top: 150px;
+}
+main a {
+  text-decoration: none;
+  color: rgb(255, 0, 212);
+}
+
+.noti {
+  background-color: black;
+  overflow: hidden;
+}
+.noti .logo {
+  height: 10vh;
+}
+
+.filtroProductos .btn {
+  border: 1px solid;
+}
+.filtroProductos .btn:hover {
+  border-color: rgb(255, 0, 212);
+  color: rgb(255, 0, 212);
 }
 
 fieldset {
@@ -131,25 +187,12 @@ fieldset #reset {
   color: rgb(255, 0, 212);
 }
 
-.tarjeta {
-  border: 2px solid;
-  border-color: rgb(255, 0, 212);
-  border-radius: 15px;
-}
-.tarjeta img {
-  background-color: black;
-  border: 0px;
-}
-.tarjeta button {
+.pagination li a {
   color: rgb(255, 0, 212);
-  background-color: rgb(5, 5, 5);
-  border-radius: 15px;
-  padding: 8px;
+  background-color: black;
+  border-color: rgb(255, 0, 212);
 }
-.tarjeta button:hover {
-  background-color: rgb(15, 15, 15);
-  box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
-}
-.tarjeta button:hover a {
+.pagination li a:hover {
+  background-color: rgb(255, 0, 212);
   color: white;
 }/*# sourceMappingURL=style.css.map */
