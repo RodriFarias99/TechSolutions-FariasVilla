@@ -104,19 +104,19 @@ fieldset{
 
 $fontSizes:(
     sm: 10px,
-    med: 18px,
-    big: 35px
+    med: 15px,
+    big: 20px
 );
 
 
 @media(min-width:768px){
-    body{
+    main{
         font-size: map-get($fontSizes, med);
     }
 }
 
 @media(min-width:1200px){
-    body{
+    main{
         font-size: map-get($fontSizes, big);
     }
 }
