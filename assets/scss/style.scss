@@ -19,9 +19,24 @@ body{
     color: $colorTexto;
 }
 
+.boton{
+    color: $colorTexto;
+    background-color: $colorterciario;
+    border-radius: 15px;
+    padding: 3px;
+    &:hover{
+        background-color: rgb(15,15,15);
+        box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
+        a{
+            color: white;
+        }
+    }
+}
 
 .contentBox{
     @extend .tarjeta;
+    border: 0;
+    box-shadow: rgba(226, 0, 196, 0.747) 1px 1px 15px 10px;
     &:hover{
         box-shadow: 1px 1px 30px 10px rgba(255, 0, 200, 1);
         border: 2px solid;
@@ -41,7 +56,8 @@ main{
     background-color: $colorSecundario;
     overflow: hidden;
     .logo{
-        height: 10vh;
+        transform: scale(2.5);
+        color: $colorPrimario;
     }
 
 }
@@ -89,11 +105,18 @@ fieldset{
 $fontSizes:(
     sm: 10px,
     med: 18px,
-    big: 25px
+    big: 35px
 );
 
-@each $screen, $size in $fontSizes{
-    .screen--#{$screen}{
-        font-size: $size;
+
+@media(min-width:768px){
+    body{
+        font-size: map-get($fontSizes, med);
+    }
+}
+
+@media(min-width:1200px){
+    body{
+        font-size: map-get($fontSizes, big);
     }
 }

@@ -11,48 +11,24 @@ footer{
         margin-left: 15px;
         align-items: center;
         .gmail{
-            background-image: url(../img/iconoGmail.png);
-            height: 50%;
-            padding: 15px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
             &:hover{
-                padding: 20px;
+                transform: scale(1.5);
             }
         }
         
         .ig{
-            background-image: url(../img/iconoIg.png);
-            height: 50%;
-            padding: 20px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
             &:hover{
-                padding: 25px;
+                transform: scale(1.5);
             }
         }
         .fb{
-            background-image: url(../img/iconoFb.png);
-            height: 50%;
-            padding: 25px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
             &:hover{
-                padding: 35px;
+                transform: scale(1.5);
             }
         }
         .Yt{
-            background-image: url(../img/iconoYt.png);
-            height: 50%;
-            padding: 25px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
             &:hover{
-                padding: 30px;
+                transform: scale(1.5);
             }
         }     
     }

@@ -19,17 +19,8 @@ a {
   border: 0px;
 }
 .tarjeta button, .contentBox button {
-  color: rgb(100, 100, 100);
-  background-color: rgb(5, 5, 5);
-  border-radius: 15px;
-  padding: 3px;
-}
-.tarjeta button:hover, .contentBox button:hover {
-  background-color: rgb(15, 15, 15);
-  box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
-}
-.tarjeta button:hover a, .contentBox button:hover a {
-  color: white;
+  font-size: 15px;
+  color: rgb(255, 0, 212);
 }
 .tarjeta:hover, .contentBox:hover {
   box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
@@ -86,49 +77,17 @@ footer .redes {
   margin-left: 15px;
   align-items: center;
 }
-footer .redes .gmail {
-  background-image: url(../img/iconoGmail.png);
-  height: 50%;
-  padding: 15px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 footer .redes .gmail:hover {
-  padding: 20px;
-}
-footer .redes .ig {
-  background-image: url(../img/iconoIg.png);
-  height: 50%;
-  padding: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  transform: scale(1.5);
 }
 footer .redes .ig:hover {
-  padding: 25px;
-}
-footer .redes .fb {
-  background-image: url(../img/iconoFb.png);
-  height: 50%;
-  padding: 25px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  transform: scale(1.5);
 }
 footer .redes .fb:hover {
-  padding: 35px;
-}
-footer .redes .Yt {
-  background-image: url(../img/iconoYt.png);
-  height: 50%;
-  padding: 25px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  transform: scale(1.5);
 }
 footer .redes .Yt:hover {
-  padding: 30px;
+  transform: scale(1.5);
 }
 
 body {
@@ -138,6 +97,24 @@ body {
   color: rgb(100, 100, 100);
 }
 
+.boton, .tarjeta button, .contentBox button {
+  color: rgb(100, 100, 100);
+  background-color: rgb(5, 5, 5);
+  border-radius: 15px;
+  padding: 3px;
+}
+.boton:hover, .tarjeta button:hover, .contentBox button:hover {
+  background-color: rgb(15, 15, 15);
+  box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
+}
+.boton:hover a, .tarjeta button:hover a, .contentBox button:hover a {
+  color: white;
+}
+
+.contentBox {
+  border: 0;
+  box-shadow: rgba(226, 0, 196, 0.747) 1px 1px 15px 10px;
+}
 .contentBox:hover {
   box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);
   border: 2px solid;
@@ -157,7 +134,8 @@ main a {
   overflow: hidden;
 }
 .noti .logo {
-  height: 10vh;
+  transform: scale(2.5);
+  color: rgb(255, 0, 212);
 }
 
 .filtroProductos .btn {
@@ -193,14 +171,13 @@ fieldset #reset {
   color: white;
 }
 
-.screen--sm {
-  font-size: 10px;
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
 }
-
-.screen--med {
-  font-size: 18px;
-}
-
-.screen--big {
-  font-size: 25px;
+@media (min-width: 1200px) {
+  body {
+    font-size: 35px;
+  }
 }/*# sourceMappingURL=style.css.map */
