@@ -19,8 +19,9 @@ a {
   border: 0px;
 }
 .tarjeta button, .contentBox button {
-  font-size: 15px;
+  font-size: 18px;
   color: rgb(255, 0, 212);
+  max-height: 35px;
 }
 .tarjeta:hover, .contentBox:hover {
   box-shadow: 1px 1px 30px 10px rgb(255, 0, 200);

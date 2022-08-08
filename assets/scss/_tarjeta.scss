@@ -15,7 +15,8 @@
     }
     button{
         @extend .boton;
-        @include textStyle(15px, $colorPrimario);
+        @include textStyle(18px, $colorPrimario);
+        max-height: 35px;
     }
     &:hover{
         box-shadow: 1px 1px 30px 10px rgba(255, 0, 200, 1);

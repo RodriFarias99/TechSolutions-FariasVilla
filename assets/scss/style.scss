@@ -110,7 +110,7 @@ $fontSizes:(
 
 
 @media(min-width:768px){
-    main{
+    main{ 
         font-size: map-get($fontSizes, med);
     }
 }
