@@ -37,6 +37,13 @@ header {
   list-style: none;
   color: white;
 }
+header .announce a {
+  color: rgb(255, 0, 212);
+}
+header .announce a:hover {
+  color: rgb(255, 0, 212);
+  transform: scale(1.3);
+}
 header .logo {
   color: black;
   text-shadow: 0 0 0.2em rgb(255, 0, 212), 0 0 0.2em rgb(255, 0, 212);
@@ -62,6 +69,16 @@ header .boxMenuList .menuList li a {
 }
 header .boxMenuList .menuList li a:hover {
   background-color: rgb(50, 50, 50);
+}
+
+.carrito {
+  min-width: 250px;
+  max-width: 600px;
+  height: auto;
+  position: fixed;
+  top: 135px;
+  right: 0;
+  z-index: 9999;
 }
 
 footer {
@@ -99,7 +116,7 @@ body {
 }
 
 .boton, .tarjeta button, .contentBox button {
-  color: rgb(100, 100, 100);
+  color: rgb(255, 0, 212);
   background-color: rgb(5, 5, 5);
   border-radius: 15px;
   padding: 3px;
@@ -107,8 +124,6 @@ body {
 .boton:hover, .tarjeta button:hover, .contentBox button:hover {
   background-color: rgb(15, 15, 15);
   box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
-}
-.boton:hover a, .tarjeta button:hover a, .contentBox button:hover a {
   color: white;
 }
 
@@ -151,6 +166,14 @@ fieldset {
   background-color: rgb(5, 5, 5);
   padding: 10px;
 }
+fieldset .login {
+  border: 2px solid;
+  border-color: rgb(255, 0, 212);
+}
+fieldset .login:hover {
+  color: white;
+  box-shadow: 1px 1px 10px 5px rgb(255, 0, 200);
+}
 fieldset .lineForm {
   color: rgb(100, 100, 100);
   font-weight: bold;
@@ -175,6 +198,9 @@ fieldset #reset {
 @media (min-width: 768px) {
   body {
     font-size: 15px;
+  }
+  header .logo {
+    font-size: 2px;
   }
 }
 @media (min-width: 1200px) {

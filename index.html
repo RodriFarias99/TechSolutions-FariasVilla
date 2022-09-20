@@ -14,12 +14,17 @@
     </head>
     <body>
         <header class="container-fluid align-items-center">
-            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
+            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
+                <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
+                <a href="./pages/login.html" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
+                <a  href="#" id="sidebarCollapse botonCarrito" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></a>
+            </div>
             <div class="row topNav">
                 <nav class="navbar navbar-dark">
-                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
-                        <a  class=" col-3 col-md-5 logo" href="index.html"><h1>Tech Solutions</h1></a>
-                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navigationBar row d-flex justify-content-between align-items-center container-fluid">
+                        <a  class=" col-3 logo" href="index.html"><h1>Tech Solutions</h1></a>
+                        <input type="text" id="formulario" class="searchBar col-6 col-md-6" placeholder="Buscar">
+                        <button class="col-2 navbar-toggler btnMenu" href="pages/products.html" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
@@ -40,6 +45,17 @@
             </div>
         </header>
         <main>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal carrito" id="collapseWidthExample">
+                  <div class="card card-body tarjeta" style="width: 400px;">
+                    <h5>Tu Carrito</h5>
+                    <ul id="contenedorCarrito" class="list-group"></ul>
+                    <hr>
+                    <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                    <button id="boton-vaciar vaciarCarrito" class="btn btn-danger">Vaciar</button>
+                  </div>
+                </div>
+            </div>
             <div class="row my-5 d-flex justify-content-center">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade col-12 col-md-8 col-xl-4" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -189,12 +205,18 @@
             </div>
             <div class="col-12 col-xl-4 py-5"><h5>©2022 Rodrigo Farías, All right reserved.</h5></div>
         </footer>
+        <script src="index.js"></script>
+        <script src="./js/catalogo.js"></script>
+        <script src="./js/buscador.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="./js/carrito.js"></script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        
     </body>
     
 </html>

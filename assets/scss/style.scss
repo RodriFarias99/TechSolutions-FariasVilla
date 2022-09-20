@@ -20,16 +20,14 @@ body{
 }
 
 .boton{
-    color: $colorTexto;
+    color: $colorPrimario;
     background-color: $colorterciario;
     border-radius: 15px;
     padding: 3px;
     &:hover{
         background-color: rgb(15,15,15);
         box-shadow: 3px 3px 5px 0px rgba(226, 0, 196, 0.7);
-        a{
-            color: white;
-        }
+        color: white;
     }
 }
 
@@ -76,6 +74,14 @@ main{
 fieldset{
     background-color: $colorterciario;
     padding: 10px;
+    .login{
+        border: 2px solid;
+        border-color: $colorPrimario;
+        &:hover{
+            color: white;
+            box-shadow: 1px 1px 10px 5px rgba(255, 0, 200, 1);
+        }
+    }
     .lineForm{
         color: rgba(100,100,100,1);
         font-weight: bold;
@@ -112,6 +118,11 @@ $fontSizes:(
 @media(min-width:768px){
     body{ 
         font-size: map-get($fontSizes, med);
+    }
+    header{
+        .logo{
+            font-size: 2px;
+        }
     }
 }
 

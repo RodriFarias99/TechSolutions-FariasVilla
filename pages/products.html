@@ -11,12 +11,17 @@
     </head>
     <body>
         <header class="container-fluid align-items-center">
-            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
+            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
+                <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
+                <a href="./login.html" target="_blank" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
+                <button id="sidebarCollapse" class="d-flex botonCarrito align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></button>
+            </div>
             <div class="row topNav">
                 <nav class="navbar navbar-dark">
-                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
-                        <a  class="col-3 col-md-5 logo" href="../index.html"><h1>Tech Solutions</h1></a>
-                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navigationBar row d-flex justify-content-between align-items-center container-fluid">
+                        <a  class=" col-3 logo" href="../index.html"><h1>Tech Solutions</h1></a>
+                        <input type="text" id="formulario" class="searchBar col-6 col-md-6" placeholder="Buscar">
+                        <button class="col-2 navbar-toggler btnMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
@@ -37,14 +42,29 @@
             </div>
         </header>
         <main class="container-fluid">
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal carrito" id="collapseWidthExample">
+                  <div class="card card-body tarjeta" style="width: 400px;">
+                    <h5>Tu Carrito</h5>
+                    <div id="contenedorCarrito"></div>
+                    <hr>
+                    <p class="text-right">Total: <div id="totalCarrito"></div></p>
+                    <button id="vaciarCarrito" class="btn btn-danger">Vaciar</button>
+                  </div>
+                </div>
+            </div>
             <h1 class="col-12 d-flex justify-content-center">Productos</h1>
             <p class="filtroProductos">
-                <a class="btn" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Gabinetes</a>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Teclados</button>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Mouses</button>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Acessorios</button>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4">Mostrar Todo</button>
+                <a class="btn" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" id="gabinetes">Gabinetes</a>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" id="teclados">Teclados</button>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" id="mouses">Mouses</button>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4" id="accesorios">Acessorios</button>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4" id="mostrarTodo">Mostrar Todo</button>
             </p>
+            <div class="row">
+                <div class="container row list col-12 row d-flex flex-wrap justify-content-center" id="resultado"></div>
+            </div>
+            <!--
             <div class="row">
                 <div class="row">
                     <div class="collapse multi-collapse show" id="multiCollapseExample1">
@@ -201,7 +221,7 @@
                     </div>
                 </div>
             </div>
-            
+            -->
             <nav aria-label="Page navigation example" class="my-5">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
@@ -231,6 +251,11 @@
             <div class="col-12 col-xl-4 py-5"><h5>©2022 Rodrigo Farías, All right reserved.</h5></div>
         </footer>
         <!-- JavaScript Bundle with Popper -->
+        <script src="../index.js"></script>
+        <script src="../js/catalogo.js"></script>
+        <script src="../js/buscador.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="../js/carrito.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
 </html>

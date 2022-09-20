@@ -5,6 +5,15 @@ header{
     margin-top: -150px;
     list-style: none;
     color: white;
+    .announce{
+        a{
+            color: $colorPrimario;
+            &:hover{
+                color: $colorPrimario;
+                transform: scale(1.3);
+            }
+        }
+    }
     .logo{
         color: black;
         text-shadow: 0 0 0.2em $colorPrimario, 0 0 0.2em $colorPrimario;
@@ -20,7 +29,7 @@ header{
             }
         }
     }
-
+    
     .boxMenuList{
         background-color: $colorterciario;
         .menuList{
@@ -37,4 +46,14 @@ header{
             }
         }
     }
+}
+
+.carrito {
+    min-width: 250px;
+    max-width: 600px;
+    height: auto;
+    position: fixed;
+    top: 135px;
+    right: 0;
+    z-index: 9999;
 }

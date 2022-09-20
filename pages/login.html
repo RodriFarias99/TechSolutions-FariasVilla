@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/img/favicon.png"   type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <script src="https://kit.fontawesome.com/a9c3ae206a.js" crossorigin="anonymous"></script>
+        <title>Contacto</title>
+    </head>
+    <body>
+        <header class="container-fluid align-items-center">
+            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
+            <div class="row topNav">
+                <nav class="navbar navbar-dark">
+                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
+                        <a  class="col-3 col-md-5 logo" href="../index.html"><h1>Tech Solutions</h1></a>
+                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <div class="row collapse containerMenu" id="navbarToggleExternalContent">
+                <div class="p-4 boxMenuList">
+                    <ul class="list-group menuList">
+                        <div class="boxList">
+                            <li><a class="list-group-item" href="../index.html">Inicio</a></li>
+                            <li><a class="list-group-item" href="./products.html">Productos</a></li>
+                            <li><a class="list-group-item" href="./service.html">Soluciones</a></li>
+                            <li><a class="list-group-item" href="./contact.html">Contacto</a></li>
+                            <li><a class="list-group-item" href="./aboutUs.html">Quiénes Somos</a></li>
+                        </div>
+                    </ul>    
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container col-10 col-md-6 col-xl-4 align-items-center justify-content-center">
+                <form class="form" id="form" action="#" method="post">
+                    <fieldset>
+                        <h3 class="d-flex align-items-center justify-content-center">Iniciar Sesión</h3>
+                        <div class="show" id="register">
+                            <form class="form" id="loginForm" action="#" method="post">
+                                <div class="form-group lineForm container">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" name="email" required placeholder="Ingrese su E-mail" id="loginMail"/>
+                                </div>
+                                <br>
+                                <div class="form-group lineForm container">
+                                    <label for="name">Contraseña</label>
+                                    <input type="password" class="form-control" name="name" required placeholder="Ingrese su Contraseña" id="loginPassword"/>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-default col-12 login my-1" name="send" id="submit">Login</button>
+                                <br>
+                            </form>
+                            <div class="d-flex justify-content-between my-5">
+                                <button type="text" name="clear" id="register" class="btn btn-default col-3" data-bs-toggle="collapse" data-bs-target="#register" aria-controls="register" aria-expanded="false">Registrarme</button>
+                                <button type="text" name="register" id="forgotPassword" class="btn btn-default col-3 ">Olvidé mi Clave</button>
+                            </div>
+                            <br>
+                        </div>
+                        <h5>Completá los siguientes datos para registrarte en nuestro sitio</h5>
+                        <form class="form form-group lineForm collapse containerMenu" id="register registerForm" action="#" method="post">
+                                <div class="form-group lineForm container">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" name="email" required placeholder="Ingrese su E-mail" id="mailForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="form-control" name="password" required placeholder="Ingrese una Contraseña" id= "password"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="confirmPassword">Confirmá tu Contraseña</label>
+                                    <input type="password" class="form-control" name="confirmPassword" required placeholder="Confirmá tu Contraseña" id="passwordForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" class="form-control" name="name" required placeholder="Ingrese su Nombre" id="nameForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="lastname">Apellido</label>
+                                    <input type="text" class="form-control" name="lastname" required placeholder="Ingrese su Apellido" id="lastnameForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="dni">DNI</label>
+                                    <input type="text" class="form-control" name="dni" required placeholder="Ingrese su DNI" id="dniForm"/>
+                                </div>
+                                <div class="form-group lineForm container my-2">
+                                    <label for="name">Provincia</label>
+                                    <select name="provincia" id="provinciaForm">
+                                        <option value="caba">CABA</option>
+                                        <option value="buenosAires">Buenos Aires</option>
+                                        <option value="laPampa">La Pampa</option>
+                                        <option value="rioNegro">Rio Negro</option>
+                                        <option value="chubut">Chubut</option>
+                                        <option value="santaCruz">Santa Cruz</option>
+                                        <option value="neuquen">Neuquen</option>
+                                        <option value="tierraDelFuego">Tierra del Fuego</option>
+                                        <option value="cordoba">Córdoba</option>
+                                        <option value="santaFe">Santa Fe</option>
+                                        <option value="sanLuis">San Luis</option>
+                                        <option value="mendoza">Mendoza</option>
+                                        <option value="salta">Salta</option>
+                                        <option value="jujuy">Jujuy</option>
+                                        <option value="corrientes">Corrientes</option>
+                                        <option value="chaco">Chaco</option>
+                                        <option value="formosa">Formosa</option>
+                                        <option value="misiones">Misiones</option>
+                                        <option value="catamarca">Catamarca</option>
+                                        <option value="tucuman">Tucuman</option>
+                                        <option value="entreRios">Entre Ríos</option>
+                                        <option value="santiago">Santiago del Estero</option>
+                                        <option value="laRioja">La Rioja</option>
+                                        <option value="sanJuan">San Juan</option>
+                                    </select>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="cp">Código Postal</label>
+                                    <input type="text" class="form-control" name="cp" required placeholder="Ingrese su Código Postal" id="cpForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="address">Direccion</label>
+                                    <input type="address" class="form-control" name="address" required placeholder="Ingrese su Dirección" id="addressForm"/>
+                                </div>
+                                <div class="form-group lineForm container">
+                                    <label for="name">Télefono</label>
+                                    <input type="text" class="form-control" name="tel" required placeholder="Ingrese su Número de Télefono" id="telForm"/>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-default" name="send" id="submit">Enviar</button>
+                            <button type="reset" name="clear" id="reset" class="btn btn-default">Reset</button>
+                        </form>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <footer class="row container-fluid text-center d-flex align-items-center justify-content-center">
+            <div class="row my-4 col-12 col-xl-4">
+                <a href="#" class="col-12">Como Comprar</a>
+                <a href="./pages/contact.html" class="col-12">Contacto</a>
+                <a href="./pages/aboutUs.html" class="col-12">Quienes Somos</a>
+            </div>
+            <div class="row my-4 col-12 col-xl-4 redes">
+                    <a href="https://www.instagram.com" target="_blank" class="fa-brands fa-instagram fa-2xl ig col-3"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="fa-brands fa-facebook-square fa-2xl fb col-3"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="fa-brands fa-youtube fa-2xl Yt col-3"></a>
+                    <a href="https://www.gmail.com" target="_blank" class="fa-solid fa-envelope fa-2xl gmail col-3"></a>
+            </div>
+            <div class="col-12 col-xl-4 py-5"><h5>©2022 Rodrigo Farías, All right reserved.</h5></div>
+        </footer>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="../index.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
