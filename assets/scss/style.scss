@@ -31,6 +31,12 @@ body{
     }
 }
 
+.botonEliminar{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
 .contentBox{
     @extend .tarjeta;
     border: 0;

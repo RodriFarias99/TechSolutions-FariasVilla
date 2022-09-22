@@ -10,25 +10,30 @@ const buscar = () =>{
         let nombre = producto.nombre.toLowerCase();
 
         if ( nombre.indexOf(texto) !== -1){
-            resultado.innerHTML += `
-            <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 m-3 p-1 d-flex justify-content-center ">
-                <img src=${producto.pic} class="col-10 img-thumbnail m-2" alt="...">
-                <div class="bodyTarjeta row container">
-                    <h5 class="col-12">${producto.nombre}</h5>
-                    <p class="col-12">${producto.detail}</p>
-                    <p class="col-12">Valor: $${producto.precio}</p>
-                    <button class="col-4 mx-1 my-3">Comprar</button>
-                    <button class="col-7 mx-1 my-3" id="${producto.id}">Agregar al Carrito</button>
-                </div>
-            </div>
-            `
+            const divProducto = document.createElement("div");
+            divProducto.classList.add("container-fluid", "tarjeta", "row","col-xl-3", "col-md-5", "col-10", "m-3", "p-1", "d-flex", "justify-content-center");
+        /*producto.innerHTML += */
+            divProducto.innerHTML = `
+                
+                    <img src=${producto.pic} class="col-10 img-thumbnail m-2" alt="...">
+                    <div class="bodyTarjeta row container">
+                        <h5 class="col-12">${producto.nombre}</h5>
+                        <p class="col-12">${producto.detail}</p>
+                        <p class="col-12">Valor: $${producto.precio}</p>
+                        <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center" id="boton${producto.id}">Agregar al Carrito</button>
+                    </div>
+                
+            `;
+            resultado.appendChild(divProducto);
+            const boton = document.getElementById(`boton${producto.id}`);
+            boton.addEventListener("click", () => {
+            agregarAlCarrito(producto.id);
+            })
         }
-
     }
     if ( resultado.innerHTML === '' ){
         resultado.innerHTML = `<li>Producto no encontrado</li>`
     }
-
 }
 formulario.addEventListener('keyup', buscar)
 buscar();
