@@ -127,6 +127,12 @@ body {
   color: white;
 }
 
+.botonEliminar {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+}
+
 .contentBox {
   border: 0;
   box-shadow: rgba(226, 0, 196, 0.747) 1px 1px 15px 10px;
@@ -164,7 +170,15 @@ main a {
 
 fieldset {
   background-color: rgb(5, 5, 5);
+  box-shadow: 1px 1px 10px 5px rgb(255, 0, 200);
   padding: 10px;
+}
+fieldset .btnForm {
+  color: rgb(255, 0, 212);
+}
+fieldset .btnForm:hover {
+  color: rgb(255, 0, 212);
+  border: solid 1px rgb(255, 0, 200);
 }
 fieldset .login {
   border: 2px solid;

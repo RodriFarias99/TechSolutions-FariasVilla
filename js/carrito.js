@@ -1,15 +1,18 @@
 //Articulo en Carro Atributos
 class articuloEnCarro{
-    constructor(nombre, precio, cantidad){
+    constructor(nombre, detail, precio, cantidad, id){
         this.nombre = nombre.toUpperCase();
+        this.detail = detail;
         this.precio = precio;
         this.cantidad = cantidad;
+        this.id = id;
     }
 }
 
 //Array de articulos en el Carrito
-let articulosEnCarro=[];
+let articulosEnCarro = [];
 let quant;
+
 
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 const totalCarrito = document.getElementById("totalCarrito");
@@ -18,17 +21,25 @@ const botonVaciarCarrito = document.getElementById("vaciarCarrito");
 const botonAgregarAlCarrito = document.getElementById("botonAgregarAlCarrito");
 let total = 0;
 
-/* 
-if(localStorage.getItem("articulosEnCarro")){
-    console.log("Hola, LLegue aqui")
+
+const actualizarTotal = () => {
+    let total = 0; 
+    articulosEnCarro.forEach( producto => {
+        total += producto.precio * producto.cantidad;
+    });
+    totalCarrito.innerHTML = `$${total}`;
     
-    let cart = JSON.parse(localStorage.getItem("articulosEnCarro"));
-    
-    reservas.push(...reserva); 
-    for(let i = 0; i < cart.length; i++ ) {
-        articulosEnCarro.push(cart[i]);
+}
+
+if((localStorage.getItem("articulosEnCarro"))) {
+    let carrito = JSON.parse(localStorage.getItem("articulosEnCarro"));
+    console.log(carrito);
+    /* reservas.push(...reserva); */
+    for(let i = 0; i < carrito.length; i++ ) {
+        articulosEnCarro.push(carrito[i]);
     }
-}*/
+    actualizarCarrito();
+}
 
 botonCarrito.onclick = () => {
     console.log(articulosEnCarro);
@@ -38,13 +49,6 @@ botonVaciarCarrito.addEventListener("click", () => {
     vaciarCarrito();
 })
 
-const actualizarTotal = () => {
-    let total = 0; 
-    articulosEnCarro.forEach( producto => {
-        total += producto.precio * producto.cantidad;
-    });
-    totalCarrito.innerHTML = `$${total}`;
-}
 
 const agregarAlCarrito = (id) => {
     const producto = productos.find(producto => producto.id === id);
@@ -52,8 +56,13 @@ const agregarAlCarrito = (id) => {
     if(productoEnCarrito) {
         quant=parseInt(productoEnCarrito.cantidad++);
     }else {
-        producto.cantidad = 1;
-        articulosEnCarro.push(producto);
+        let cantP = 1;
+        let nombreP = producto.nombre;
+        let detailP = producto.detail;
+        let precioP = producto.precio;
+        let idP = producto.id;
+        const productoAgregado = new articuloEnCarro(nombreP, detailP, precioP, cantP, idP);
+        articulosEnCarro.push(productoAgregado);
     }
     actualizarCarrito();
 }
@@ -70,11 +79,11 @@ function actualizarCarrito() {
                         </div>
                         `;
         contenedorCarrito.appendChild(div);
-
         const boton = document.getElementById(`${producto.id}`);
         
    })
    actualizarTotal();
+   localStorage.setItem("articulosEnCarro", JSON.stringify(articulosEnCarro));
       
 }
 
