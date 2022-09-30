@@ -14,13 +14,13 @@
             <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
                 <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
                 <a href="./login.html" target="_blank" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
-                <a href="./cart.html" target="_blank" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2"></a>
+                <a  href="#" id="sidebarCollapse" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></a>
             </div>
             <div class="row topNav">
                 <nav class="navbar navbar-dark">
-                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
-                        <a  class="col-3 col-md-5 logo" href="../index.html"><h1>Tech Solutions</h1></a>
-                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navigationBar row d-flex justify-content-between align-items-center container-fluid">
+                        <a  class=" col-3 logo" href="../index.html"><h1>Tech Solutions</h1></a>
+                        <button class="col-2 navbar-toggler btnMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
@@ -41,6 +41,17 @@
             </div>
         </header>
         <main>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal carrito" id="collapseWidthExample">
+                  <div class="card card-body tarjeta" style="width: 400px;">
+                    <h5>Tu Carrito</h5>
+                    <div id="contenedorCarrito"></div>
+                    <hr>
+                    <p class="text-right">Total: <div id="totalCarrito"></div></p>
+                    <button id="vaciarCarrito" class="btn btn-danger">Vaciar</button>
+                  </div>
+                </div>
+            </div>
             <div class="row d-flex justify-content-center">
             <div class="row container-fluid px-5 justify-content-center align-items-center">
                 <h1>Quiénes Somos</h1>
@@ -67,5 +78,7 @@
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <script src="../index.js"></script>
+        <script src="../index.js"></script>
+        <script src="../js/carrito.js"></script>
     </body>
 </html>
