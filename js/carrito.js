@@ -31,6 +31,7 @@ const actualizarTotal = () => {
     
 }
 
+
 if((localStorage.getItem("articulosEnCarro"))) {
     let carrito = JSON.parse(localStorage.getItem("articulosEnCarro"));
     console.log(carrito);

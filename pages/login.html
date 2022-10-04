@@ -40,22 +40,22 @@
             <div class="container col-10 col-md-6 col-xl-4 align-items-center justify-content-center">
                     <fieldset class="form row" id="form">
                         <h3 class="d-flex align-items-center justify-content-center">Iniciar Sesión</h3>
-                        <form class="form row form-group lineForm container" id="loginForm" action="#" method="get  ">
+                        <form class="form row form-group lineForm container" id="loginForm" onsubmit="iniciarSesionForm();" action="../index.html" method="get  ">
                             <label for="mailLogin">E-mail</label>
                             <input id="mailLogin" placeholder="Ingrese su E-mail" type="text"/>
 
                             <label for="passwordLogin">Contraseña</label>
                             <input id="passwordLogin" placeholder="Ingrese su Contraseña" type="password"/>
 
-                            <button class="my-3 btn btnForm">Enviar</button>
+                            <button class="my-3 btn btnForm">Ingresar</button>
                         </form>
                         <br>
 
                         <h5>Completá los siguientes datos para registrarte en nuestro sitio</h5>
 
-                        <form class="form form-group lineForm container containerMenu my-2 row" onsubmit="submitForm();" id="register registerForm" action="#" method="get">
+                        <form class="form form-group lineForm container containerMenu my-2 row" onsubmit="submitForm();" id="register registerForm" action="../index.html" method="get">
                             <label for="nameForm">Nombre</label>
-                            <input id="nameForm" required type="text">
+                            <input id="nameForm" required type="text"> 
 
                             <label for="lastnameForm">Apellido</label>
                             <input id="lastnameForm" required type="text">
@@ -107,7 +107,7 @@
                             <label for="telForm">Télefono</label>
                             <input type="text" class="form-control" name="tel" required placeholder="Ingrese su Número de Télefono" id="telForm"/>
                             <br>
-                            <button class="btn btnForm my-3">Enviar</button>
+                            <button class="btn btnForm my-3">Registrarse</button>
                             <button type="reset" id="reset" class="btn btn-default">Reset</button>
                         </form>
                     </fieldset>
