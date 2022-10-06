@@ -13,15 +13,34 @@ class usuario{
 }
 
 const clientes = [];
-let userActual = [];
+const admin = new usuario("admin", "", "", "admin@gmail.com","admin", "", "", "", "");
+clientes[0]=admin;
+console.log(clientes);
+
+let userLoggeado;
+let userActual;
 let userVerificando;
 let acceso;
+
 if(localStorage.getItem("usuarios")) {
     let cliente = JSON.parse(localStorage.getItem("usuarios"));
     /* reservas.push(...reserva); */
     for(let i = 0; i < cliente.length; i++ ) {
         clientes.push(cliente[i]);
     }
+}
+if(localStorage.getItem("UsuarioLoggeado")) {
+    let loggeado = JSON.parse(localStorage.getItem("UsuarioLoggeado"));
+    console.log(loggeado);
+
+    /* reservas.push(...reserva); */
+    console.log("Entro aca");
+    userLoggeado = loggeado;
+    acceso = 1;
+}else{
+    acceso = 0;
+    userLoggeado;
+    userActual = userLoggeado;
 }
 
 const registerForm = document.getElementById("registerForm");
@@ -31,27 +50,63 @@ registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
     crearUsuario();
 })*/
+function cerrarSesion(){
+    acceso = 0;
+    userLoggeado;
+    localStorage.removeItem("UsuarioLoggeado");
+}
 
 function iniciarSesionForm(){
     const correo = document.getElementById("mailLogin").value;
     const password = document.getElementById("passwordLogin").value;
+    console.log("-Ejecuta INICIAR SESION\nCorreo Ingresado="+correo);
     if(existeCorreo(correo)){
-        let userloggeado =  existeCorreo(correo);
-        (userLoggeado.contraseña === password) && (acceso = 1);
-        userActual = userLoggeado;
-        localStorage.setItem("UsuarioLoggeado", JSON.stringify(userActual));
+        userLoggeado =  existeCorreo(correo);
+        if(userLoggeado.contraseña === password){
+            acceso = 1;
+            userActual = userLoggeado;
+            localStorage.setItem("UsuarioLoggeado", JSON.stringify(userActual));
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Bienvenido '+userActual.nombre,
+                showConfirmButton: false,
+                timer: 3000
+            });
+        }else{
+            Swal.fire({
+            icon: 'error',
+            title: 'Ups...',
+            text: 'La Contraseña ingresada es Incorrecta',
+            footer: '<a href="#">Why do I have this issue?</a>'
+            });
+        }
     }else{
-        alert("Ese E-mail No está Registrado");
+        Swal.fire({
+            icon: 'error',
+            title: 'Ups...',
+            text: 'El Correo Ingresado no está Registrado en el Sitio!',
+            timer: 3000
+        });
+        
     }
-    
 }
 function existeCorreo(correo){
-
-    (userVerificando = clientes.find(cliente => cliente.mail === correo)) ? userVerificando : null; 
+    let userVerificando = clientes.find(cliente => cliente.mail === correo);
+    if(userVerificando){
+        return(userVerificando);
+    }else{
+        return(false);
+    }
 }
 
 function submitForm(){
     crearUsuario();
+    Swal.fire(
+        'Bien Hecho!',
+        'Te Has Registrado en TECH SOLUTIONS!',
+        'success'
+      )
 }
 
 function crearUsuario(){

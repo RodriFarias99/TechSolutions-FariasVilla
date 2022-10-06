@@ -1,6 +1,7 @@
 const resultado = document.querySelector('#resultado');
 const formulario = document.querySelector('#formulario');
 
+
 const buscar = () =>{
 
     resultado.innerHTML = '';
