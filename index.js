@@ -11,4 +11,3 @@ if(acceso == 1){
 function verificarAcceso(){
     (acceso==1) && cerrarSesion();
 }
-console.log(acceso);

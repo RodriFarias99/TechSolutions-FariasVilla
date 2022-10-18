@@ -13,8 +13,10 @@
     <body>
         <header class="container-fluid align-items-center">
             <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
-                <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
-                <a href="./login.html" target="_blank" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
+                <p class="col-9 align-items-center">Envíos gratis en compras mayores a $5000</p>
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="login.html" id="logoUser" onclick="verificarAcceso();" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
+                </div>
                 <a  href="#" id="sidebarCollapse" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></a>
             </div>
             <div class="row topNav">
@@ -100,8 +102,9 @@
         </script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <script src="../index.js"></script>
+        <script src="../js/catalogo.js"></script>
         <script src="../js/carrito.js"></script>
+        <script src="../js/login.js"></script>
         
     </body>
 </html>

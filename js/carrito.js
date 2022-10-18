@@ -34,13 +34,13 @@ const actualizarTotal = () => {
 
 if((localStorage.getItem("articulosEnCarro"))) {
     let carrito = JSON.parse(localStorage.getItem("articulosEnCarro"));
-    console.log(carrito);
     /* reservas.push(...reserva); */
     for(let i = 0; i < carrito.length; i++ ) {
         articulosEnCarro.push(carrito[i]);
     }
     actualizarCarrito();
 }
+
 
 botonCarrito.onclick = () => {
     console.log(articulosEnCarro);
@@ -53,9 +53,12 @@ botonVaciarCarrito.addEventListener("click", () => {
 
 const agregarAlCarrito = (id) => {
     const producto = productos.find(producto => producto.id === id);
+    const indexCatalogo = productos.findIndex(producto => producto.id === id);
+    const indexSelected = articulosEnCarro.findIndex(el=> el.id == id);
     const productoEnCarrito = articulosEnCarro.find(producto => producto.id === id);
+    controlarStock(indexCatalogo);
     if(productoEnCarrito) {
-        quant=parseInt(productoEnCarrito.cantidad++);
+        articulosEnCarro[indexSelected].cantidad++;
     }else {
         let cantP = 1;
         let nombreP = producto.nombre;
@@ -68,6 +71,13 @@ const agregarAlCarrito = (id) => {
     actualizarCarrito();
 }
 
+function controlarStock(id){
+    productos[id].stock--;
+    if(productos[id].stock < 1){
+        buscar();
+    }
+}
+
 function actualizarCarrito() {
     contenedorCarrito.innerHTML = "";
 
@@ -76,11 +86,11 @@ function actualizarCarrito() {
         div.innerHTML = `
                         <div>
                             <li>${articulo.cantidad} X ${articulo.nombre} - $${articulo.precio}</li>
-                            <button onClick = "eliminarDelCarrito(${producto.id})" class="btn botonEliminar">[ Eliminar ]</button>
+                            <button onClick = "eliminarDelCarrito(${articulo.id})" class="btn botonEliminar">[ Eliminar ]</button>
                         </div>
                         `;
         contenedorCarrito.appendChild(div);
-        const boton = document.getElementById(`${producto.id}`);
+        const boton = document.getElementById(`${articulo.id}`);
         
    })
    actualizarTotal();
@@ -97,6 +107,14 @@ function vaciarCarrito() {
 }
 const eliminarDelCarrito = (id) => {
     const producto = articulosEnCarro.find(producto => producto.id === id);
-    articulosEnCarro.splice(articulosEnCarro.indexOf(producto),1);
+    const indexSelected = productos.findIndex(el=> el.id == id);
+    const indOfCarrito = articulosEnCarro.findIndex(producto => producto.id === id);
+    productos[indexSelected].stock++;
+    if(articulosEnCarro[indOfCarrito]?.cantidad>1){
+        articulosEnCarro[indOfCarrito].cantidad--;
+    }else{
+        articulosEnCarro.splice(articulosEnCarro.indexOf(producto),1);
+    }
+    buscar();
     actualizarCarrito();
 }

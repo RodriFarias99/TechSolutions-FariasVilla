@@ -12,24 +12,40 @@ const buscar = () =>{
 
         if ( nombre.indexOf(texto) !== -1){
             const divProducto = document.createElement("div");
+
             divProducto.classList.add("container-fluid", "tarjeta", "row","col-xl-3", "col-md-5", "col-10", "m-3", "p-1", "d-flex", "justify-content-center");
         /*producto.innerHTML += */
-            divProducto.innerHTML = `
+            if(producto.stock > 0){
+                divProducto.innerHTML = `
                 
-                    <img src=${producto.pic} class="col-10 img-thumbnail m-2" alt="...">
-                    <div class="bodyTarjeta row container">
-                        <h5 class="col-12">${producto.nombre}</h5>
-                        <p class="col-12">${producto.detail}</p>
-                        <p class="col-12">Valor: $${producto.precio}</p>
-                        <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center" id="boton${producto.id}">Agregar al Carrito</button>
-                    </div>
+                        <img src=${producto.pic} class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">${producto.nombre}</h5>
+                            <p class="col-12">${producto.detail}</p>
+                            <p class="col-12">Valor: $${producto.precio}</p>
+                            <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center" id="boton${producto.id}">Agregar al Carrito</button>
+                        </div>
                 
-            `;
-            resultado.appendChild(divProducto);
-            const boton = document.getElementById(`boton${producto.id}`);
-            boton.addEventListener("click", () => {
-            agregarAlCarrito(producto.id);
-            })
+                `;
+                resultado.appendChild(divProducto);
+                const boton = document.getElementById(`boton${producto.id}`);
+                boton.addEventListener("click", () => {
+                agregarAlCarrito(producto.id);
+                })
+            }else{
+                divProducto.innerHTML = `
+                
+                        <img src=${producto.pic} class="col-10 img-thumbnail m-2" alt="...">
+                        <div class="bodyTarjeta row container">
+                            <h5 class="col-12">${producto.nombre}</h5>
+                            <p class="col-12">${producto.detail}</p>
+                            <p class="col-12">Valor: $${producto.precio}</p>
+                            <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center" disabled="true" id="boton${producto.id}">No hay Stock</button>
+                        </div>
+                
+                `;
+                resultado.appendChild(divProducto);
+            }
         }
     }
     if ( resultado.innerHTML === '' ){

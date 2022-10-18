@@ -11,6 +11,7 @@ class articulo{
     }
 }
 
+/*
 const producto1 = new articulo('Gabinete Gamer Cromax Cm-8801', 'Gabinetes', 'RGB Mid Tower S/fuente', 6000, 1, "../assets/img/prod14.jpg", 3);
 const producto2 = new articulo('Gabinete Gamer Magnum Tech 235M Negro', 'Gabinetes', 'Mid Tower, ATX/micro ATX/Mini-ATX, USB 2.0/3.0, sin Fuente, Negro', 11175, 2, "../assets/img/prod16.jpg", 2);
 const producto3 = new articulo('Gabinete Gamer MAGNUM TECH 235GM Blanco', 'Gabinetes', 'Mid Tower, ATX/micro ATX/Mini-ATX, USB 2.0/3.0, sin Fuente, Blanco', 20000, 3, "../assets/img/prod152.png", 1);
@@ -25,8 +26,20 @@ const producto11 = new articulo('Cargador Celular Carga Rápida', 'Accesorios', 
 const producto12 = new articulo('Cable USB Tipo C', 'Accesorios', 'Cable USB tipo C para Cargadores o Transferencia de Datos', 2000, 12, "../assets/img/prod8.jpg", 5);
 const producto13 = new articulo('Smartwatch', 'Accesorios', 'Reloj Smartwatch Llamadas Mensajes Whatsapp Cardio', 6852, 13, "../assets/img/prod9.jpg", 5);
 const producto14 = new articulo('Auriculares Inalámbricos TWS', 'Accesorios', 'Auriculares Xiaomi Redmi Airdots S', 3200, 14, "../assets/img/prod10.jpg", 5);
+*/
 
-const productos=[producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto12, producto13, producto14];
+const productos=[];
+const apiStock = "../json/stock.json";
+
+fetch(apiStock)
+    .then(respuesta => respuesta.json())
+    .then((datos) => {
+        datos.forEach(producto => {
+            productos.push(producto);
+        });
+    })
+    .catch(error => console.log(error))
+    
 
 const producto = document.getElementById("resultado"); //CONTENEDOR DONDE MUESTRO LOS PRODUCTOS
 /*

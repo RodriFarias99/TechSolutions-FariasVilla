@@ -15,7 +15,6 @@ class usuario{
 const clientes = [];
 const admin = new usuario("admin", "", "", "admin@gmail.com","admin", "", "", "", "");
 clientes[0]=admin;
-console.log(clientes);
 
 let userLoggeado;
 let userActual;
@@ -32,14 +31,11 @@ if(localStorage.getItem("usuarios")) {
 if(localStorage.getItem("UsuarioLoggeado")) {
     let loggeado = JSON.parse(localStorage.getItem("UsuarioLoggeado"));
     console.log(loggeado);
-
     /* reservas.push(...reserva); */
-    console.log("Entro aca");
     userLoggeado = loggeado;
     acceso = 1;
 }else{
     acceso = 0;
-    userLoggeado;
     userActual = userLoggeado;
 }
 
@@ -52,7 +48,6 @@ registerForm.addEventListener("submit", (e) => {
 })*/
 function cerrarSesion(){
     acceso = 0;
-    userLoggeado;
     localStorage.removeItem("UsuarioLoggeado");
 }
 
