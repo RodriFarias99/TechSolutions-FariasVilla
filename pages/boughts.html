@@ -7,23 +7,16 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../assets/css/style.css">
         <script src="https://kit.fontawesome.com/a9c3ae206a.js" crossorigin="anonymous"></script>
-        <title>Quienes Somos</title>
+        <title>Compra</title>
     </head>
     <body>
         <header class="container-fluid align-items-center">
-            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
-                <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
-                <div class="container row col-2">
-                    <p class="col-8 d-flex align-items-center justify-content-center my-3" id="userWelcome"></p>
-                    <a href="./login.html" id="logoUser" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2 my-5"></a>
-                </div>
-                <a  href="#" id="sidebarCollapse" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></a>
-            </div>
+            <div class="announce d-flex justify-content-center align-items-center col-12 mt-3"><p>Envíos gratis en compras mayores a $5000</p></div>
             <div class="row topNav">
                 <nav class="navbar navbar-dark">
-                    <div class="navigationBar row d-flex justify-content-between align-items-center container-fluid">
-                        <a  class=" col-3 logo" href="../index.html"><h1>Tech Solutions</h1></a>
-                        <button class="col-2 navbar-toggler btnMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navigationBar row justify-content-between align-items-center container-fluid">
+                        <a  class="col-3 col-md-5 logo" href="../index.html"><h1>Tech Solutions</h1></a>
+                        <button class=" col-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
@@ -44,28 +37,15 @@
             </div>
         </header>
         <main>
-            <div style="min-height: 120px;">
-                <div class="collapse collapse-horizontal carrito" id="collapseWidthExample">
-                    <div class="card card-body tarjeta row" style="width: 400px;">
-                        <h5>Tu Carrito</h5>
-                        <div id="contenedorCarrito"></div>
-                        <hr>
-                        <p class="text-right">Total: <div id="totalCarrito"></div></p>
-                        <div class="row d-flex">
-                            <button id="vaciarCarrito" class="col-5 mx-3 btn botonEliminar">Vaciar</button>
-                            <button id="botonComprar" class="col-5 btn botonComprar">Comprar</button>
-                        </div>
-                    </div>
-                </div>
+            <h2>Tus Compras</h2>
+            <hr>
+            <div class="contentBox m-5 col-10 p-5 flex-wrap align-items-center justify-content-center">
+                <fieldset class="p-3 my-2 buy">
+                    <div id="contenedorCompras" class="my-5"></div>
+                    <hr>
+                    <div class="d-flex justify-content-between"><p>Total: </p><p id="totalCarrito"></p></div>
+                </fieldset>
             </div>
-            <div class="row d-flex justify-content-center">
-            <div class="row container-fluid px-5 justify-content-center align-items-center">
-                <h1>Quiénes Somos</h1>
-                <p class="col-12">Somos unos aficionados y apasionados al Mundo del Gaming y Tech. Nos Encanta Armar, reparar y/o hacer Mantenimiento a Computadoras y por supuesto Estamos Capacitados para hacerlo de la mejor Forma! <br> También tenemos los Mejores Accesorios para Celulares y Notebooks para tus Necesidades. <br> Podés Encontrarnos en la Ubicación marcada en el Mapa:
-                </p>
-                <iframe class="col-12 col-xl-8 rounded my-5" height="500vh" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.001142516887!2d-58. 38205075369531!3d-34.60410372767277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1653934199726!5m2!1ses!2sar"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>  
-        </div>
         </main>
         <footer class="row container-fluid text-center d-flex align-items-center justify-content-center">
             <div class="row my-4 col-12 col-xl-4">
@@ -83,7 +63,9 @@
         </footer>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../js/variables.js"></script>
-        <script src="../index.js"></script>
-    </body>
+        <script src="../js/boughts.js"></script>
+        
+</body>
 </html>

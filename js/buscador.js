@@ -23,7 +23,7 @@ const buscar = () =>{
                             <h5 class="col-12">${producto.nombre}</h5>
                             <p class="col-12">${producto.detail}</p>
                             <p class="col-12">Valor: $${producto.precio}</p>
-                            <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center" id="boton${producto.id}">Agregar al Carrito</button>
+                            <button class="col-10 mx-1 my-3 d-flex justify-content-center align-content-center button" id="boton${producto.id}">Agregar al Carrito</button>
                         </div>
                 
                 `;
@@ -53,4 +53,4 @@ const buscar = () =>{
     }
 }
 formulario.addEventListener('keyup', buscar)
-buscar();
+

@@ -13,7 +13,7 @@
         background-color: $colorSecundario;
         border: 0px;
     }
-    button{
+    .button{
         @extend .boton;
         @include textStyle(18px, $colorPrimario);
         max-height: 35px;

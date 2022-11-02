@@ -1,5 +1,8 @@
+const loginForm= document.querySelector('#loginForm');
+const registerForm= document.querySelector('#registerForm');
+
 class usuario{
-    constructor(nombre, apellido, dni, mail, contraseña, provincia, cp, direccion, telefono){
+    constructor(nombre, apellido, dni, mail, contraseña, provincia, cp, direccion, depto, telefono){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -8,53 +11,43 @@ class usuario{
         this.provincia = provincia;
         this.cp = cp;
         this.direccion = direccion;
+        this.depto = depto;
         this.telefono = telefono;
     }
 }
 
-const clientes = [];
-const admin = new usuario("admin", "", "", "admin@gmail.com","admin", "", "", "", "");
-clientes[0]=admin;
-
-let userLoggeado;
-let userActual;
-let userVerificando;
-let acceso;
-
-if(localStorage.getItem("usuarios")) {
+if((localStorage.getItem("usuarios"))) {
     let cliente = JSON.parse(localStorage.getItem("usuarios"));
-    /* reservas.push(...reserva); */
     for(let i = 0; i < cliente.length; i++ ) {
         clientes.push(cliente[i]);
     }
 }
-if(localStorage.getItem("UsuarioLoggeado")) {
-    let loggeado = JSON.parse(localStorage.getItem("UsuarioLoggeado"));
-    console.log(loggeado);
-    /* reservas.push(...reserva); */
-    userLoggeado = loggeado;
-    acceso = 1;
-}else{
-    acceso = 0;
-    userActual = userLoggeado;
-}
 
-const registerForm = document.getElementById("registerForm");
-const loginForm =document.getElementById("loginForm");
-/*
-registerForm.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    iniciarSesionForm();
+})
+
+registerForm.addEventListener("submit", (f) => {
+    f.preventDefault();
     crearUsuario();
-})*/
-function cerrarSesion(){
-    acceso = 0;
-    localStorage.removeItem("UsuarioLoggeado");
-}
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Bien Hecho! Te Has Registrado en TECH SOLUTIONS!\n\nBienvenid@ '+userActual.nombre+'!',
+        showConfirmButton: false,
+        timer: 3000
+    });
+    setTimeout(()=> {
+        location.href ="../index.html";
+    }, 1500)
+})
+
+
 
 function iniciarSesionForm(){
     const correo = document.getElementById("mailLogin").value;
     const password = document.getElementById("passwordLogin").value;
-    console.log("-Ejecuta INICIAR SESION\nCorreo Ingresado="+correo);
     if(existeCorreo(correo)){
         userLoggeado =  existeCorreo(correo);
         if(userLoggeado.contraseña === password){
@@ -64,16 +57,18 @@ function iniciarSesionForm(){
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Bienvenido '+userActual.nombre,
+                title: 'Bienvenid@ '+userActual.nombre,
                 showConfirmButton: false,
                 timer: 3000
             });
+            setTimeout(()=> {
+                location.href ="../index.html";
+            }, 1500)
         }else{
             Swal.fire({
             icon: 'error',
             title: 'Ups...',
-            text: 'La Contraseña ingresada es Incorrecta',
-            footer: '<a href="#">Why do I have this issue?</a>'
+            text: 'La Contraseña ingresada es Incorrecta'
             });
         }
     }else{
@@ -95,15 +90,6 @@ function existeCorreo(correo){
     }
 }
 
-function submitForm(){
-    crearUsuario();
-    Swal.fire(
-        'Bien Hecho!',
-        'Te Has Registrado en TECH SOLUTIONS!',
-        'success'
-      )
-}
-
 function crearUsuario(){
     const nombre = document.getElementById("nameForm").value;
     const apellido = document.getElementById("lastnameForm").value;
@@ -113,14 +99,14 @@ function crearUsuario(){
     const provincia = document.getElementById("provinciaForm").value;
     const cp = document.getElementById("cpForm").value;
     const direccion = document.getElementById("addressForm").value;
+    const depto = document.getElementById("deptoForm").value;
     const telefono = document.getElementById("telForm").value;
-    const nuevoUsuario = new usuario(nombre, apellido, dni, mail, contraseña, provincia, cp, direccion, telefono);
+    const nuevoUsuario = new usuario(nombre, apellido, dni, mail, contraseña, provincia, cp, direccion, depto, telefono);
     clientes.push(nuevoUsuario);
     userActual = nuevoUsuario;
     localStorage.setItem("usuarios", JSON.stringify(clientes));
     localStorage.setItem("UsuarioLoggeado", JSON.stringify(userActual));
     acceso = 1;
-    registerForm.reset();
-    clientes.length>0 && console.log(clientes);
+    (clientes.length>0) && console.log(clientes);
     
 }

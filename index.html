@@ -15,9 +15,10 @@
     <body>
         <header class="container-fluid align-items-center">
             <div class="announce d-flex justify-content-center align-items-center col-12 mt-3">
-                <p class="col-9 align-items-center">Envíos gratis en compras mayores a $5000</p>
-                <div class="d-flex align-items-center justify-content-center">
-                    <a href="./pages/login.html" id="logoUser" onclick="verificarAcceso();" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2"></a>
+                <p class="col-8 align-items-center">Envíos gratis en compras mayores a $5000</p>
+                <div class="container row col-2">
+                    <p class="col-8 d-flex align-items-center justify-content-center my-3" id="userWelcome"></p>
+                    <a href="./pages/login.html" id="logoUser" class="d-flex align-items-center justify-content-center fa-xl fa-regular fa-user col-2 my-5"></a>
                 </div>
                 <a  href="#" id="sidebarCollapse" class="d-flex align-items-center justify-content-center fa-xl fa-solid fa-basket-shopping col-2" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></a>
             </div>
@@ -49,13 +50,16 @@
         <main>
             <div style="min-height: 120px;">
                 <div class="collapse collapse-horizontal carrito" id="collapseWidthExample">
-                  <div class="card card-body tarjeta" style="width: 400px;">
-                    <h5>Tu Carrito</h5>
-                    <div id="contenedorCarrito"></div>
-                    <hr>
-                    <p class="text-right">Total: <div id="totalCarrito"></div></p>
-                    <button id="vaciarCarrito" class="btn btn-danger">Vaciar</button>
-                  </div>
+                    <div class="card card-body tarjeta row" style="width: 400px;">
+                        <h5>Tu Carrito</h5>
+                        <div id="contenedorCarrito"></div>
+                        <hr>
+                        <p class="text-right">Total: <div id="totalCarrito"></div></p>
+                        <div class="row d-flex">
+                            <button id="vaciarCarrito" class="col-5 mx-3 btn botonEliminar">Vaciar</button>
+                            <button id="botonComprar" class="col-5 btn botonComprar">Comprar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row my-5 d-flex justify-content-center">
@@ -96,109 +100,9 @@
                     </div>
                 </div>
             </div>
-            <!--
-            <div class="list mx-3 row d-flex flex-wrap justify-content-center" data-aos="zoom-in-right" data-aos-duration="3000">
-            </div>
-            -->
             <div class="row" data-aos="zoom-in-right" data-aos-duration="3000">
                 <div class="container row list col-12 row d-flex flex-wrap justify-content-center" id="resultado"></div>
             </div>
-                    <!--
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod152.png" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Gabinete Gamer</h5>
-                            <p class="col-12">Gabinete Gamer MAGNUM TECH 235GM, Mid Tower, ATX/micro ATX/Mini-ATX, USB 2.0/3.0, sin Fuente, Blanco</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod2.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Teclado Gamer</h5>
-                            <p class="col-12">Teclado gamer Razer Huntsman Mini QWERTY Razer Red inglés US color negro con luz RGB</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod3.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Mouse Gamer</h5>
-                            <p class="col-12">Razer Mamba 2012</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod4.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Auriculares Gamer</h5>
-                            <p class="col-12">Auriculares Razer Kraken 2019 Green Pc Ps4 Switch</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod5.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Joystick Xbox</h5>
-                            <p class="col-12">Joystick inalámbrico Microsoft Xbox Xbox Elite wireless controller series 2 negro</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="list mx-3 my-3 row d-flex flex-wrap justify-content-center" data-aos="zoom-in-left" data-aos-duration="3000">
-                    <h2 class="px-3" >Accesorios para Celulares y Laptops</h2>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-around ">
-                        <img src="./assets/img/prod6.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Cargador Inalámbrico</h5>
-                            <p class="col-12">Cargador Inalámbrico para celulares por NFC</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod7.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Cargador Celular Carga Rápida</h5>
-                            <p class="col-12">Cargador Samsung Ultra Rapido Original 25w Cable Tipo C A C</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod8.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Cable USB Tipo C</h5>
-                            <p class="col-12">Cable USB tipo C para Cargadores o Transferencia de Datos</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod9.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Smartwatch</h5>
-                            <p class="col-12">Reloj Smartwatch Llamadas Mensajes Whatsapp Cardio</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                    <div class="container-fluid  tarjeta row col-10 col-md-5 col-xl-3 my-3 mx-3 p-1 d-flex justify-content-center ">
-                        <img src="./assets/img/prod10.jpg" class="col-12 img-thumbnail my-2 mx-0" alt="...">
-                        <div class="bodyTarjeta row container">
-                            <h5 class="col-12">Auriculares Inalámbricos TWS</h5>
-                            <p class="col-12">Auriculares Xiaomi Redmi Airdots S</p>
-                            <button class="col-5 mx-1 my-3"><a href="#">Comprar</a></button>
-                            <button class="col-5 mx-1 my-3"><a href="#">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                </div>
-                -->
         </main>
         <footer class="row container-fluid text-center d-flex align-items-center justify-content-center">
             <div class="row my-4 col-12 col-xl-4">
@@ -220,10 +124,11 @@
             AOS.init();
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/variables.js"></script>
         <script src="./js/catalogo.js"></script>
         <script src="./js/carrito.js"></script>
         <script src="./js/buscador.js"></script>
-        <script src="./js/login.js"></script>
         <script src="index.js"></script>
     </body>
     

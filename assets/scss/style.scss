@@ -33,10 +33,45 @@ body{
 
 .botonEliminar{
     color: white;
-    background-color: red;
+    background-color: rgb(200,0,0);
     border-radius: 5px;
+    &:hover{
+        background-color: rgb(255,0,0);
+        box-shadow: 3px 3px 5px 0px red;
+        font-weight: 900;
+        color: white;
+    }
 }
 
+.botonComprar{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    &:hover{
+        background-color: rgb(0,200,0);
+        box-shadow: 3px 3px 5px 0px rgba(0, 120, 0, 0.8);
+        font-weight: 900;
+        color: white;
+    }
+}
+
+.botonVerCompras{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    &:hover{
+        background-color: rgb(150,150,150);
+        box-shadow: 3px 3px 5px 0px rgba(150, 150, 150, 0.8);
+        font-weight: 900;
+        color: white;
+    }
+}
+
+.buy{
+    color: rgb(150, 150, 150);
+    font-weight: bold;
+    border: 3px solid rgb(80, 80, 80);
+}
 .contentBox{
     @extend .tarjeta;
     border: 0;
@@ -77,7 +112,7 @@ main{
 }
 
 
-fieldset{
+.formulario{
     background-color: $colorterciario;
     box-shadow: 1px 1px 10px 5px rgba(255, 0, 200, 1);
     padding: 10px;
@@ -107,6 +142,10 @@ fieldset{
     #reset{
         color: $colorPrimario;
     }
+}
+
+.fa-whatsapp{
+    color: green;
 }
 
 .pagination{
